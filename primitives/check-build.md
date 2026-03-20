@@ -1,8 +1,8 @@
 ---
 name: check-build
 description: Run build process and verify project compiles successfully.
-entry_point: false
-invoked_by: workflows/implementation/execute-plan
+user-invocable: false
+allowed-tools: ["Bash"]
 ---
 
 # Primitive: Check Build

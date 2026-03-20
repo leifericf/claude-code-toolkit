@@ -68,8 +68,8 @@ When adding new primitives:
 1. Make them **focused** - Do one thing well
 2. Make them **agnostic** - Ask questions, don't prescribe tools
 3. Make them **composable** - Can be used in multiple contexts
-4. Add `entry_point: false` to frontmatter
-5. Document which workflow(s) invoke them
+4. Add `user-invocable: false` to frontmatter
+5. Add `allowed-tools: ["Bash"]` if the primitive runs shell commands
 
 ## Architecture
 

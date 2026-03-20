@@ -1,8 +1,7 @@
 ---
 name: assess-rollout
 description: Define deployment strategy and verification for a feature.
-entry_point: false
-invoked_by: workflows/implementation/plan-feature
+user-invocable: false
 ---
 
 # Primitive: Assess Rollout

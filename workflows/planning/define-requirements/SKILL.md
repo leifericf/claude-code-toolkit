@@ -1,7 +1,6 @@
 ---
 name: define-requirements
 description: Define WHAT must be built with testable, scoped requirements. Keep requirements focused on functional and non-functional needs without discussing tech stack, architecture, timelines, or estimates. Use after problem description is complete.
-entry_point: true
 ---
 
 # Define Requirements

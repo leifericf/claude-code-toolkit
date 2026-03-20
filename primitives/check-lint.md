@@ -1,8 +1,8 @@
 ---
 name: check-lint
 description: Run linters and verify code quality standards.
-entry_point: false
-invoked_by: workflows/implementation/execute-plan
+user-invocable: false
+allowed-tools: ["Bash"]
 ---
 
 # Primitive: Check Lint

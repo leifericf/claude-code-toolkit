@@ -1,8 +1,7 @@
 ---
 name: assess-data
 description: Plan data schema changes, migrations, and backfills for a feature.
-entry_point: false
-invoked_by: workflows/implementation/plan-feature
+user-invocable: false
 ---
 
 # Primitive: Assess Data

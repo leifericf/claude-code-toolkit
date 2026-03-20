@@ -1,7 +1,7 @@
 ---
 name: implement-feature
 description: Implement a feature from selection to validation. High-level orchestrator that guides you through the complete implementation workflow.
-entry_point: true
+disable-model-invocation: true
 ---
 
 # Implement Feature (Orchestrator)

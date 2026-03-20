@@ -1,8 +1,7 @@
 ---
 name: assess-testing
 description: Define testing strategy (Tier 0/1/2) for a feature.
-entry_point: false
-invoked_by: workflows/implementation/plan-feature
+user-invocable: false
 ---
 
 # Primitive: Assess Testing

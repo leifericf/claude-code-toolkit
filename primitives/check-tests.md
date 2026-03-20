@@ -1,8 +1,8 @@
 ---
 name: check-tests
 description: Run test suite and verify code correctness.
-entry_point: false
-invoked_by: workflows/implementation/execute-plan
+user-invocable: false
+allowed-tools: ["Bash"]
 ---
 
 # Primitive: Check Tests

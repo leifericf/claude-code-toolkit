@@ -1,7 +1,6 @@
 ---
 name: quality-gate
 description: Run quality checks (format, lint, test, build) in parallel.
-entry_point: true
 ---
 
 # Quality Gate

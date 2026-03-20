@@ -1,7 +1,7 @@
 ---
 name: incident-response
 description: Handle production incidents from triage to follow-up. High-level orchestrator for incident response.
-entry_point: true
+disable-model-invocation: true
 ---
 
 # Incident Response (Orchestrator)

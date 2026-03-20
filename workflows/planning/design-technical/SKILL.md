@@ -1,7 +1,6 @@
 ---
 name: design-technical
 description: Design a simple, evolvable system with clear boundaries and data flows. Choose a coherent tech stack, define components, and establish repository conventions. Use after risk review to create the technical blueprint.
-entry_point: true
 ---
 
 # Technical Design

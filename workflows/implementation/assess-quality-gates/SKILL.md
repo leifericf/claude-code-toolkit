@@ -1,7 +1,6 @@
 ---
 name: assess-quality-gates
 description: Assess multiple quality dimensions in parallel (observability, testing, data, rollout).
-entry_point: true
 ---
 
 # Assess Quality Gates

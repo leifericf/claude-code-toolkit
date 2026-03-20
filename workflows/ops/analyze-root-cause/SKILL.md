@@ -1,7 +1,6 @@
 ---
 name: analyze-root-cause
 description: Perform rigorous root cause analysis tracing the full causal chain from trigger to failure. Identify gaps in defenses and define preventative controls. Use for deep analysis of incidents.
-entry_point: true
 ---
 
 # Root Cause Analysis

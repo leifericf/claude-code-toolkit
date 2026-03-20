@@ -1,8 +1,8 @@
 ---
 name: check-format
 description: Run code formatters and verify formatting is correct.
-entry_point: false
-invoked_by: workflows/implementation/execute-plan
+user-invocable: false
+allowed-tools: ["Bash"]
 ---
 
 # Primitive: Check Format

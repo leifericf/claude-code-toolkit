@@ -1,7 +1,6 @@
 ---
 name: design-ux
 description: Establish UX guardrails including visual direction, interaction patterns, and conventions for web, mobile, desktop, TUI, or CLI interfaces. Use when the project has user-facing interfaces to reduce design entropy and define reusable rules.
-entry_point: true
 ---
 
 # Design UX Guide

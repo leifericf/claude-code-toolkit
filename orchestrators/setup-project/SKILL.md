@@ -1,7 +1,7 @@
 ---
 name: setup-project
 description: Set up a new project from scratch. High-level orchestrator for the setup phase.
-entry_point: true
+disable-model-invocation: true
 ---
 
 # Setup Project (Orchestrator)

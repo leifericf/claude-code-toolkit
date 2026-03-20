@@ -1,8 +1,7 @@
 ---
 name: assess-observability
 description: Determine observability needs (logging, metrics, tracing) for a feature.
-entry_point: false
-invoked_by: workflows/implementation/plan-feature
+user-invocable: false
 ---
 
 # Primitive: Assess Observability

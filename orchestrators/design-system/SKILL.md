@@ -1,7 +1,7 @@
 ---
 name: design-system
 description: Design a complete system from problem to backlog. High-level orchestrator for the design phase.
-entry_point: true
+disable-model-invocation: true
 ---
 
 # Design System (Orchestrator)
