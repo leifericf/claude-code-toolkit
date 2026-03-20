@@ -4,7 +4,9 @@ description: Define WHAT must be built with testable, scoped requirements. Keep 
 entry_point: true
 ---
 
-# Skill: Define Requirements
+# Define Requirements
+
+## Role
 
 You are a pragmatic product manager. Your focus is to define WHAT must be built -- not HOW. Keep requirements testable, scoped, and easy to remember. Do not discuss tech stack, architecture, timelines, or estimates.
 
@@ -18,11 +20,11 @@ If any prerequisite is missing, tell the user which artifact is needed and which
 
 ## Procedure
 
-### Step 1: Review Existing Artifacts
+### 1. Review Existing Artifacts
 
 Read all prerequisite artifacts. Check `.claude/artifacts/decisions/open-questions.md` for any `[Blocking]` items that affect `product-requirements.md`. If blocking questions exist, surface them and resolve before proceeding.
 
-### Step 2: Clarify Ambiguities
+### 2. Clarify Ambiguities
 
 Ask clarification questions (no more than 3 per turn) where ambiguity exists in the problem description. Focus on:
 
@@ -33,11 +35,11 @@ Ask clarification questions (no more than 3 per turn) where ambiguity exists in 
 When you identify unclear requirements, add them to `.claude/artifacts/decisions/open-questions.md` under `## Open`:
 - `- [ ] [Affects: product-requirements.md] <question> (Answer: TBD)`
 
-### Step 3: Iterate Until Scope Is Crisp
+### 3. Iterate Until Scope Is Crisp
 
 Continue until the user confirms the requirements are complete and accurate. Shape requirements around the smallest valuable increments.
 
-### Step 4: Write the Artifact
+### 4. Write the Artifact
 
 Write `.claude/artifacts/planning/product-requirements.md` using this exact structure:
 
@@ -96,6 +98,10 @@ Write `.claude/artifacts/planning/product-requirements.md` using this exact stru
 
 Do not include an "Open Questions" section in the PRD. Open questions belong in `.claude/artifacts/decisions/open-questions.md`.
 
-### Step 5: Suggest Next Step
+## Output
 
-> "Does the PRD reflect what should be built? If yes, run `/review-risks`."
+`.claude/artifacts/planning/product-requirements.md`
+
+## Next Step
+
+`/review-risks` -- Surface ambiguity, contradictions, risky assumptions, and missing acceptance criteria.

@@ -153,13 +153,32 @@ quality_gates:
 
 ## Note
 
-This workflow orchestrates parallel execution but can also be run standalone:
-
-```bash
-User: /assess-quality-gates
-→ User provides Gherkin spec
-→ Workflow launches 4 sub-agents in parallel
-→ Workflow returns merged assessment
-```
+This workflow orchestrates parallel execution but can also be run standalone.
 
 However, it's most commonly called by other workflows (e.g., plan-feature) as part of a larger process.
+
+## Output
+
+Return a structured object to the parent workflow:
+
+```yaml
+quality_gates:
+  observability:
+    applicability: Required | N/A
+    <other fields from assess-observability primitive>
+  testing:
+    tier_0: {...}
+    tier_1: {...}
+    tier_2: {...}
+    <other fields from assess-testing primitive>
+  data:
+    applicability: Required | N/A
+    <other fields from assess-data primitive>
+  rollout:
+    applicability: Required | N/A
+    <other fields from assess-rollout primitive>
+```
+
+## Next Step
+
+Return results to parent workflow (e.g., plan-feature) for incorporation into the plan.

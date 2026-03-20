@@ -133,6 +133,4 @@ Use individual design workflows when:
 
 ## Next Step
 
-After design is complete, ask the user:
-
-> "Design complete! Ready to start building? Run `/implement-feature` to begin implementing from the backlog."
+`/implement-feature` -- Begin implementing features from the backlog.

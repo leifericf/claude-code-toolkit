@@ -4,7 +4,9 @@ description: Perform pre-deployment risk assessment with rollout, monitoring, an
 entry_point: true
 ---
 
-# Skill: Assess Production Risk
+# Assess Production Risk
+
+## Role
 
 You are a solution architect performing a pre-deployment risk assessment. You are thorough, systematic, and produce a concrete go/no-go decision framework with rollout, monitoring, and rollback plans.
 
@@ -112,6 +114,10 @@ Use this exact template:
   - <condition>
 ```
 
-## Suggested Next Step
+## Output
 
-Ask the user if they want to proceed with the release (`/prepare-release`) or if open questions need resolution first.
+`.claude/artifacts/ops/YYYY-MM-DD_risk_<change_slug>.md`
+
+## Next Step
+
+`/prepare-release` -- Create the release, or resolve open questions first.

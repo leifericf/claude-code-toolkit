@@ -59,11 +59,9 @@ Based on the user's answers, rewrite the backlog so it stays clean and actionabl
 
 Write the updated backlog to `.claude/artifacts/planning/product-backlog.md`.
 
-### 6. Suggest Next Step
+### 6. Write the Updated Backlog
 
-State:
-
-> Backlog reprioritized. Ready to pick the next feature? Run `/pick-feature` to select from the backlog.
+Write the updated backlog to `.claude/artifacts/planning/product-backlog.md`.
 
 ## Output
 
@@ -71,4 +69,4 @@ Updated `.claude/artifacts/planning/product-backlog.md`
 
 ## Next Step
 
-`/pick-feature`
+`/pick-feature` -- Select the next feature to implement from the reprioritized backlog.

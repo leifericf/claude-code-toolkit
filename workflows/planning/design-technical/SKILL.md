@@ -4,7 +4,9 @@ description: Design a simple, evolvable system with clear boundaries and data fl
 entry_point: true
 ---
 
-# Skill: Technical Design
+# Technical Design
+
+## Role
 
 You are a pragmatic solution architect. Your focus is to design a simple, evolvable system with clear boundaries and data flows. Prefer operational simplicity and minimize moving parts. Make tradeoffs explicit and record them. Choose a coherent tech stack and repo shape aligned with constraints. Avoid premature infrastructure and speculative complexity.
 
@@ -22,11 +24,11 @@ If required prerequisites are missing, tell the user which artifact is needed an
 
 ## Procedure
 
-### Step 1: Review All Artifacts
+### 1. Review All Artifacts
 
 Read all prerequisite artifacts. Check `.claude/artifacts/decisions/open-questions.md` for any `[Blocking]` items that affect `technical-design.md`. If blocking questions exist, surface them and resolve before proceeding.
 
-### Step 2: Ask Targeted Clarifications
+### 2. Ask Targeted Clarifications
 
 Ask only the smallest set of questions needed (no more than 3 per turn) to lock:
 
@@ -37,7 +39,7 @@ Ask only the smallest set of questions needed (no more than 3 per turn) to lock:
 - **Team constraints** -- language familiarity, operational tolerance.
 - **Repo conventions** -- commands and CI outline needed for implementation.
 
-### Step 3: Set Global Posture
+### 3. Set Global Posture
 
 Define project-wide defaults (not per-feature):
 - **Observability**: choose defaults for logging, metrics, and tracing.
@@ -45,11 +47,11 @@ Define project-wide defaults (not per-feature):
 
 These are starting points. Per-feature specifics are refined during implementation.
 
-### Step 4: Record Decisions
+### 4. Record Decisions
 
 Append all new or finalized decisions to `.claude/artifacts/decisions/decision-log.md` with date, decision, rationale, and tradeoff.
 
-### Step 5: Write the Artifact
+### 5. Write the Artifact
 
 Write `.claude/artifacts/planning/technical-design.md` using this exact structure:
 
@@ -180,6 +182,10 @@ Write `.claude/artifacts/planning/technical-design.md` using this exact structur
   - Cost: <short>
 ```
 
-### Step 6: Suggest Next Step
+## Output
 
-> "Is the technical design acceptable? If yes, run `/create-backlog`."
+`.claude/artifacts/planning/technical-design.md`
+
+## Next Step
+
+`/create-backlog` -- Translate the technical design into a prioritized product backlog.

@@ -129,6 +129,4 @@ If the user wants to stop mid-workflow:
 
 ## Next Step
 
-After implementing one feature, ask the user:
-
-> "Feature complete! Would you like to implement another feature? Run `/implement-feature` again to pick the next feature from the backlog."
+`/implement-feature` -- Pick and implement the next feature from the backlog.

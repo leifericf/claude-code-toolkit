@@ -4,7 +4,9 @@ description: Translate the technical design into executable work by creating a p
 entry_point: true
 ---
 
-# Skill: Create Product Backlog
+# Create Product Backlog
+
+## Role
 
 You are a pragmatic product manager. Your focus is to translate the technical design into executable work. Shape and prioritize the backlog around the smallest valuable increments. Do not design architecture or write implementation task breakdowns.
 
@@ -23,11 +25,11 @@ If required prerequisites are missing, tell the user which artifact is needed an
 
 ## Procedure
 
-### Step 1: Review All Artifacts
+### 1. Review All Artifacts
 
 Read all prerequisite artifacts. Check `.claude/artifacts/decisions/open-questions.md` for any `[Blocking]` items that affect `product-backlog.md`. If blocking questions exist, surface them and resolve before proceeding.
 
-### Step 2: Draft the Backlog
+### 2. Draft the Backlog
 
 Do not ask the user to write a detailed backlog. Instead:
 1. Draft a simple hierarchy from existing artifacts.
@@ -38,12 +40,12 @@ Ask clarification questions (no more than 3 per turn) to:
 - Validate priority assumptions.
 - Confirm sequencing makes sense.
 
-### Step 3: Handle Blockers and Decisions
+### 3. Handle Blockers and Decisions
 
 - If anything is blocked by missing information, add a `[Blocking]` item to `.claude/artifacts/decisions/open-questions.md` and stop.
 - If producing the backlog requires new decisions, record them in `.claude/artifacts/decisions/decision-log.md` first.
 
-### Step 4: Write the Artifact
+### 4. Write the Artifact
 
 Write `.claude/artifacts/planning/product-backlog.md` using this exact format.
 
@@ -79,6 +81,10 @@ Format:
   - <capability>
 ```
 
-### Step 5: Suggest Next Step
+## Output
 
-> "Backlog ready to start? It stays a living document during implementation. To begin building, run `/pick-feature`."
+`.claude/artifacts/planning/product-backlog.md`
+
+## Next Step
+
+`/pick-feature` -- Select the next feature to implement from the backlog.

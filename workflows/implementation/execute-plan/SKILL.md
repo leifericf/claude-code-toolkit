@@ -123,13 +123,9 @@ Before saying done:
 
 ### 12. Validation Handoff
 
-State:
+State that implementation is complete and automation is green. Ask the user to validate with the validation script.
 
-> Implementation done and automation is green. Please validate with the script above. What (if anything) didn't work? Include repro steps.
-
-If the user wants a dedicated validation pass, suggest:
-
-> Run `/validate-feature` for a structured validation walkthrough.
+If the user wants a dedicated validation pass, suggest running `/validate-feature`.
 
 ## Output
 
@@ -137,4 +133,4 @@ Code changes committed to a local feature branch, with updated task checkboxes i
 
 ## Next Step
 
-`/validate-feature` (optional) or `/triage-backlog` (optional) or done
+`/validate-feature` (optional) -- Structured validation walkthrough, or `/triage-backlog` -- Update backlog priorities.

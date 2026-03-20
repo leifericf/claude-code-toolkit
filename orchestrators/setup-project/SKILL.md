@@ -77,9 +77,4 @@ Use individual setup workflows when:
 
 ## Next Step
 
-After project setup is complete, ask the user:
-
-> "Project set up! What would you like to work on next?
->
-> - Run `/design-system` to design the system architecture
-> - Run `/implement-feature` to start building (if adding to existing project)"
+`/design-system` -- Design the system architecture, or `/implement-feature` -- Start building (if adding to existing project).

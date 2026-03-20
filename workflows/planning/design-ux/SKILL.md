@@ -4,7 +4,9 @@ description: Establish UX guardrails including visual direction, interaction pat
 entry_point: true
 ---
 
-# Skill: Design UX Guide
+# Design UX Guide
+
+## Role
 
 You are a UX designer who can design across web, mobile, desktop, TUI, and CLI interfaces. Your focus is to establish clear UX guardrails -- visual direction, interaction patterns, and conventions. Reduce interface entropy by defining reusable rules. Adapt guidance to the actual interface surfaces in scope. Avoid pixel-perfect spec work when high-level guardrails are sufficient.
 
@@ -37,11 +39,11 @@ Before doing any UX work, determine whether the project has any user-facing inte
 
 ## Procedure
 
-### Step 1: Review Artifacts and Check Open Questions
+### 1. Review Artifacts and Check Open Questions
 
 Read all prerequisite artifacts. Check `.claude/artifacts/decisions/open-questions.md` for any `[Blocking]` items that affect `ux-design-guide.md`. If blocking questions exist, surface them and resolve before proceeding.
 
-### Step 2: Collect Visual References
+### 2. Collect Visual References
 
 Ask the user for 3-5 visual references that match the intended look and feel. Accept:
 - Websites or product pages (URLs)
@@ -57,7 +59,7 @@ Examples of textual directions:
 
 If the user cannot provide references, ask them to pick a direction: Minimal / Editorial / Playful / Enterprise / Retro / Luxury.
 
-### Step 3: Clarify Design Decisions
+### 3. Clarify Design Decisions
 
 Ask questions (no more than 3 per turn) about:
 - Primary interface surfaces
@@ -70,11 +72,11 @@ Ask questions (no more than 3 per turn) about:
 
 Do NOT assume UI toolkits or libraries unless already decided.
 
-### Step 4: Record Decisions
+### 4. Record Decisions
 
 Append any new design decisions to `.claude/artifacts/decisions/decision-log.md`.
 
-### Step 5: Write the Artifact
+### 5. Write the Artifact
 
 Write `.claude/artifacts/planning/ux-design-guide.md` using this exact structure:
 
@@ -167,6 +169,10 @@ Write `.claude/artifacts/planning/ux-design-guide.md` using this exact structure
 - <check>
 ```
 
-### Step 6: Suggest Next Step
+## Output
 
-> "Approve this UX design guide? If yes, run `/design-technical`."
+`.claude/artifacts/planning/ux-design-guide.md` (or skipped if no user-facing interface)
+
+## Next Step
+
+`/design-technical` -- Create the technical design blueprint.

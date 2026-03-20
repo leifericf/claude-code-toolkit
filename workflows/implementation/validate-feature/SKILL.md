@@ -4,7 +4,7 @@ description: Support user validation by turning issues into actionable follow-up
 entry_point: true
 ---
 
-# Validate
+# Validate Feature
 
 ## Role
 
@@ -57,11 +57,13 @@ If the feature is accepted as working end-to-end:
 - Ensure manual scenario artifacts are updated if user-visible behavior changed.
 - Ensure new scenarios are added for newly introduced flows.
 
-### 6. Suggest Next Step
+### 6. Confirm Acceptance
 
-State:
+If the feature is accepted as working end-to-end:
 
-> Feature validated and accepted. Ready to start the next feature? Run `/pick-feature` to select from the backlog.
+- Ensure the implemented backlog item is moved to `In product (shipped)` in `.claude/artifacts/planning/product-backlog.md`.
+- Ensure manual scenario artifacts are updated if user-visible behavior changed.
+- Ensure new scenarios are added for newly introduced flows.
 
 ## Output
 
@@ -69,4 +71,4 @@ No new artifact. The plan artifact and backlog are updated as needed during vali
 
 ## Next Step
 
-`/pick-feature` (next cycle) or `/triage-backlog`
+`/pick-feature` -- Select the next feature to implement, or `/triage-backlog` -- Reprioritize the backlog.

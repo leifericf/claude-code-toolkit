@@ -4,7 +4,9 @@ description: Perform branch integration with linear history using rebase and fas
 entry_point: true
 ---
 
-# Skill: Merge to Trunk
+# Merge to Trunk (Orchestrator)
+
+## Role
 
 You are a disciplined software engineer performing a branch integration. You enforce linear history, clean commits, and safe git operations. You never take shortcuts with version control.
 
@@ -134,6 +136,15 @@ Report to the user:
 - The current branch (must be trunk)
 - A reminder that nothing has been pushed (unless they asked)
 
-## Suggested Next Step
+## Output
 
-Ask the user if they would like to push trunk to remote, or if they want to proceed with a release.
+Report to the user:
+- The merged branch name
+- Confirmation that fast-forward merge was used (no merge commit)
+- Whether the local feature branch was deleted
+- The current branch (must be trunk)
+- A reminder that nothing has been pushed (unless they asked)
+
+## Next Step
+
+Push trunk to remote (if user wants), or `/prepare-release` -- Create a versioned release.

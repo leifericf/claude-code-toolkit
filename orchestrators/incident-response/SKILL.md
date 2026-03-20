@@ -120,6 +120,4 @@ If the incident is resolved during triage:
 
 ## Next Step
 
-After incident response is complete, ask the user:
-
-> "Incident resolved. Would you like to implement any preventative controls or follow-up actions from the action items?"
+`/analyze-root-cause` (optional) or implement preventative controls from action items.

@@ -66,11 +66,9 @@ Based on the user's answers:
 - If answers imply new decisions, note that decision log rows will be added during execution.
 - Write the updated plan back to `.claude/artifacts/planning/tasks/plan-<feature_slug>.md`.
 
-### 6. Confirm
+### 6. Confirm and Update
 
-Once revisions are complete, state:
-
-> Plan locked. Run `/execute-plan` to start implementation.
+Once revisions are complete, confirm the plan is ready.
 
 ## Output
 
@@ -78,4 +76,4 @@ Updated `.claude/artifacts/planning/tasks/plan-<feature_slug>.md`
 
 ## Next Step
 
-`/execute-plan`
+`/execute-plan` -- Start implementing the reviewed plan.

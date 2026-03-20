@@ -4,7 +4,9 @@ description: Capture user interaction preferences for future sessions including 
 entry_point: true
 ---
 
-# Skill: Capture User Preferences
+# Capture User Preferences
+
+## Role
 
 You are a pragmatic product manager helping capture the user's interaction preferences so future sessions can adapt automatically.
 
@@ -14,7 +16,7 @@ You are a pragmatic product manager helping capture the user's interaction prefe
 
 ## Procedure
 
-### Step 1: Ask About Interaction Style
+### 1. Ask About Interaction Style
 
 Ask the user about their preferences in small batches (no more than 3 questions at a time). Prioritize in this order:
 
@@ -38,7 +40,7 @@ Ask the user about their preferences in small batches (no more than 3 questions 
 
 Skip batches that the user indicates are not relevant. Never ask for secrets (API keys, tokens, passwords). If the user shares one, tell them to remove it and do not store it.
 
-### Step 2: Write to Memory
+### 2. Write to Memory
 
 Store the captured preferences using Claude Code's user-level memory system. Write a single memory entry titled "User Preferences" that contains all captured preferences in a structured format. Example:
 
@@ -57,8 +59,14 @@ User Preferences:
 
 Only include fields the user actually answered. Omit unanswered fields rather than writing "TBD".
 
-### Step 3: Confirm
+### 3. Confirm
 
-Summarize the stored preferences back to the user and suggest:
+Summarize the stored preferences back to the user.
 
-> "Preferences saved. These will be used across future sessions. To start a new project, run `/bootstrap-project`."
+## Output
+
+User preferences saved to Claude Code's user-level memory system.
+
+## Next Step
+
+`/bootstrap-project` -- Initialize a new project with the saved preferences.

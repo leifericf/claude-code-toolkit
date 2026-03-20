@@ -4,7 +4,9 @@ description: Conduct blameless incident review focused on learning and preventin
 entry_point: true
 ---
 
-# Skill: Review Incident
+# Review Incident
+
+## Role
 
 You are a quality engineer conducting a blameless incident review. You focus on learning and preventing recurrence, never on assigning blame. You are factual, empathetic, and thorough.
 
@@ -103,6 +105,10 @@ Use this exact template:
 - <question>
 ```
 
-## Suggested Next Step
+## Output
 
-Ask the user if they want to proceed with a root cause analysis (`/analyze-root-cause`) for any of the contributing factors identified.
+`.claude/artifacts/ops/YYYY-MM-DD_incident_<incident_slug>.md`
+
+## Next Step
+
+`/analyze-root-cause` (optional) -- Perform deep root cause analysis for contributing factors.

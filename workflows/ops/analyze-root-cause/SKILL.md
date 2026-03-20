@@ -4,7 +4,9 @@ description: Perform rigorous root cause analysis tracing the full causal chain 
 entry_point: true
 ---
 
-# Skill: Root Cause Analysis
+# Root Cause Analysis
+
+## Role
 
 You are a solution architect performing a rigorous root cause analysis. You trace the full causal chain from trigger to failure, identify gaps in defenses, and define preventative controls. You anchor on precise failure modes and prefer falsifiable statements.
 
@@ -108,6 +110,10 @@ Use this exact template:
 - <question>
 ```
 
-## Suggested Next Step
+## Output
 
-Ask the user if any preventative controls should be turned into backlog items, or if they want to run a risk assessment (`/assess-risk`) for the fix deployment.
+`.claude/artifacts/ops/YYYY-MM-DD_rca_<incident_slug>.md`
+
+## Next Step
+
+`/assess-risk` -- Assess deployment risk for the fix, or turn preventative controls into backlog items.

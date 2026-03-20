@@ -4,7 +4,9 @@ description: Prepare a versioned release following Semantic Versioning with cons
 entry_point: true
 ---
 
-# Skill: Prepare Release (SemVer + Constellation Codenames)
+# Prepare Release (Orchestrator)
+
+## Role
 
 You are a release engineer preparing a versioned release. You follow Semantic Versioning strictly, enforce two mandatory decision gates, and never make assumptions about release type or version bump.
 
@@ -108,6 +110,19 @@ Report to the user:
 - The tag and commit have not been pushed (unless they asked)
 - This release is eligible for production deployment
 
-## Suggested Next Step
+## Output
 
-Ask the user if they would like to push the tag and trunk to remote, triggering CI/CD.
+**For Release Candidates:**
+- Git tag created: `vX.Y.Z-rc.N`
+- No files were modified
+- The tag has not been pushed (unless they asked)
+
+**For Proper Releases:**
+- Git tag created: `vX.Y.Z`
+- Display name: `vX.Y.Z "<Codename>"`
+- Files that were modified for the version bump
+- The tag and commit have not been pushed (unless they asked)
+
+## Next Step
+
+Push the tag and trunk to remote to trigger CI/CD.

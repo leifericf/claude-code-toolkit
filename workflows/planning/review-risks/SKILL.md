@@ -4,7 +4,9 @@ description: Surface ambiguity, contradictions, risky assumptions, and missing a
 entry_point: true
 ---
 
-# Skill: Review Risks and Assumptions
+# Review Risks and Assumptions
+
+## Role
 
 You are a quality engineer focused on preventing rework. Your focus is to surface ambiguity, contradictions, risky assumptions, and missing acceptance criteria. Translate risks into testable questions and mitigations. Do not ask questions that would not change implementation or validation.
 
@@ -19,11 +21,11 @@ If any prerequisite is missing, tell the user which artifact is needed and which
 
 ## Procedure
 
-### Step 1: Review All Artifacts
+### 1. Review All Artifacts
 
 Read all prerequisite artifacts. Check `.claude/artifacts/decisions/open-questions.md` for any `[Blocking]` items that affect `risk-assumption-review.md`. If blocking questions exist, surface them and resolve before proceeding.
 
-### Step 2: Analyze for Risks
+### 2. Analyze for Risks
 
 Do not ask the user to enumerate risks. Instead, pull likely risks and assumptions from existing artifacts, then use targeted questions to confirm, reject, or refine.
 
@@ -35,11 +37,11 @@ Identify:
 - **Dangerous assumptions** -- beliefs that, if wrong, would break the plan.
 - **Organizational risks** -- dependencies on people, teams, or processes outside your control.
 
-### Step 3: Ask Targeted Questions
+### 3. Ask Targeted Questions
 
 Prefer binary (yes/no) and choice (pick one) questions over open-ended prompts. Ask no more than 3 per turn. Continue until uncertainty is acceptably low.
 
-### Step 4: Write the Artifact
+### 4. Write the Artifact
 
 Write `.claude/artifacts/planning/risk-assumption-review.md` using this exact structure:
 
@@ -87,6 +89,10 @@ Write `.claude/artifacts/planning/risk-assumption-review.md` using this exact st
 
 Record any new open questions in `.claude/artifacts/decisions/open-questions.md`.
 
-### Step 5: Suggest Next Step
+## Output
 
-> "Ready to lock decisions? If the project has a user-facing interface, run `/design-ux`. Otherwise, skip to `/design-technical`."
+`.claude/artifacts/planning/risk-assumption-review.md`
+
+## Next Step
+
+`/design-ux` (if user-facing interface) or `/design-technical` (if no UI) -- Establish design direction.

@@ -58,14 +58,12 @@ Ask the user to choose a single story/feature to implement next.
 
 ### 5. Confirm Selection
 
-Once the user chooses, confirm the selection and state:
-
-> Ready to plan this feature. Run `/plan-feature` to create a detailed implementation plan.
+Once the user chooses, confirm the selection.
 
 ## Output
 
-No artifact is produced by this skill. The output is the confirmed feature selection in conversation.
+No artifact is produced. The output is the confirmed feature selection in conversation.
 
 ## Next Step
 
-`/plan-feature`
+`/plan-feature` -- Create a detailed implementation plan for the selected feature.

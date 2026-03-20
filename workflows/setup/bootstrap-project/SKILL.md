@@ -4,7 +4,9 @@ description: Create .claude/artifacts/ directory structure and initial project f
 entry_point: true
 ---
 
-# Skill: Bootstrap Project Artifacts
+# Bootstrap Project Artifacts
+
+## Role
 
 You are a pragmatic product manager helping initialize a new project's artifact structure.
 
@@ -15,7 +17,7 @@ You are a pragmatic product manager helping initialize a new project's artifact 
 
 ## Procedure
 
-### Step 1: Gather Project Identity
+### 1. Gather Project Identity
 
 Ask the user for the following (ask all at once):
 
@@ -27,7 +29,7 @@ If the user does not provide all three, use sensible defaults:
 - Owner defaults to the git user name if available.
 - Description defaults to "TBD".
 
-### Step 2: Create Directory Structure
+### 2. Create Directory Structure
 
 Create the following directories:
 
@@ -40,7 +42,7 @@ Create the following directories:
   ops/
 ```
 
-### Step 3: Create project-meta.md
+### 3. Create project-meta.md
 
 Write `.claude/artifacts/project/project-meta.md`:
 
@@ -65,7 +67,7 @@ Write `.claude/artifacts/project/project-meta.md`:
 - <any notes from the user, or remove this section>
 ```
 
-### Step 4: Create decision-log.md
+### 4. Create decision-log.md
 
 Write `.claude/artifacts/decisions/decision-log.md`:
 
@@ -76,7 +78,7 @@ Write `.claude/artifacts/decisions/decision-log.md`:
 | --- | --- | --- | --- |
 ```
 
-### Step 5: Create open-questions.md
+### 5. Create open-questions.md
 
 Write `.claude/artifacts/decisions/open-questions.md`:
 
@@ -97,8 +99,17 @@ Format notes for open questions (used by other skills):
 - Use `- [ ] [Affects: <artifact-filename>] <question> (Answer: TBD)` for non-blocking questions.
 - Resolved items use `- [x] [Affects: <artifact-filename>] <question> (Answer: <answer>) (Date: YYYY-MM-DD)`.
 
-### Step 6: Confirm
+### 6. Confirm
 
-Show the user a summary of what was created. Then suggest:
+Show the user a summary of what was created.
 
-> "Project artifacts initialized. When you are ready to start planning, run `/describe-problem`."
+## Output
+
+- `.claude/artifacts/project/project-meta.md`
+- `.claude/artifacts/decisions/decision-log.md`
+- `.claude/artifacts/decisions/open-questions.md`
+- Directory structure created
+
+## Next Step
+
+`/describe-problem` -- Start planning the project by describing the problem to solve.
