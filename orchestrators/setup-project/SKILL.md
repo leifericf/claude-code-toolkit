@@ -45,28 +45,6 @@ This will:
 - Establish conventions
 - Create project metadata
 
-## User Experience
-
-Running `/setup-project` will guide you through setting up a new project:
-
-1. **Preferences** - How do you like to work?
-2. **Bootstrap** - What kind of project are we creating?
-
-Each step can also be run independently:
-- `/capture-preferences` - Update your preferences
-- `/bootstrap-project` - Bootstrap additional projects
-
-## When to Use
-
-Use `/setup-project` when:
-- Starting a completely new project
-- Setting up Claude Code for the first time
-- Wanting to establish project conventions
-
-Use individual setup workflows when:
-- Updating your preferences
-- Bootstrapping additional related projects
-
 ## Output
 
 - User preferences saved for future sessions

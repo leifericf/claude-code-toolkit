@@ -83,13 +83,6 @@ The parent workflow will:
 - Surface any N/A findings with reasons
 - Highlight any required gates that need attention
 
-## Parallel Execution Benefits
-
-By running assessments in parallel:
-- **Speed**: 4 dimensions assessed concurrently instead of sequentially
-- **Consistency**: Each dimension gets focused attention from a specialist
-- **Independence**: Each assessment is self-contained and doesn't block others
-
 ## Example
 
 **Input**: Gherkin spec for a payment processing feature
@@ -127,12 +120,6 @@ quality_gates:
       - trigger: Checkout error rate spike > 5%
         action: rollback immediately
 ```
-
-## Note
-
-This workflow orchestrates parallel execution but can also be run standalone.
-
-However, it's most commonly called by other workflows (e.g., plan-feature) as part of a larger process.
 
 ## Output
 

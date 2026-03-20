@@ -86,13 +86,6 @@ If any checks fail:
 - Provide actionable next steps
 - Offer to auto-fix if safe (e.g., run formatter)
 
-## Parallel Execution Benefits
-
-By running quality checks in parallel:
-- **Speed**: 4 checks run concurrently instead of sequentially
-- **Efficiency**: Total time = max(check times), not sum(check times)
-- **Consistency**: All checks run against the same code state
-
 ## Output
 
 Return a structured object to the user:
@@ -180,6 +173,3 @@ quality_gate:
 
 If all checks pass, proceed with commit/merge. If any checks fail, fix issues and re-run.
 
-## Note
-
-This workflow orchestrates parallel execution but can also be run standalone. However, it's most commonly called by other workflows (e.g., execute-plan) as part of the quality gate process.

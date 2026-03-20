@@ -91,37 +91,6 @@ This will:
 - Prioritize by value and risk
 - Organize into Now/Next/Later buckets
 
-## User Experience
-
-Running `/design-system` will guide you through the complete design process:
-
-1. **Problem** - What are we solving and why?
-2. **Requirements** - What does success look like?
-3. **Risks** - What could go wrong?
-4. **UX** - How should it look and feel? (if applicable)
-5. **Technical** - How will we build it?
-6. **Backlog** - What will we build first?
-
-Each step can also be run independently if you need to revisit a specific aspect:
-- `/describe-problem` - Refine the problem statement
-- `/define-requirements` - Update requirements
-- `/review-risks` - Reassess risks
-- `/design-ux` - Update UX direction
-- `/design-technical` - Revise technical design
-- `/create-backlog` - Reprioritize backlog
-
-## When to Use
-
-Use `/design-system` when:
-- Starting a new project
-- Major redesign of existing system
-- Significant new feature area
-
-Use individual design workflows when:
-- Revisiting one aspect of the design
-- Updating plans after learning more
-- Iterating on a specific dimension
-
 ## Output
 
 - Problem description artifact

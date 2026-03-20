@@ -72,44 +72,7 @@ This will:
 - Define rollback plan
 - Recommend deployment strategy
 
-## User Experience
-
-Running `/incident-response` will guide you through the complete incident lifecycle:
-
-1. **Triage** - What's happening and how do we stabilize?
-2. **Review** - What happened and how did we respond?
-3. **Root Cause** - Why did it happen and how do we prevent it? (optional)
-4. **Risk Assessment** - Is the fix safe to deploy?
-
-Each step can also be run independently:
-- `/triage-logs` - Just triage signals
-- `/review-incident` - Just conduct post-incident review
-- `/analyze-root-cause` - Just perform deep RCA
-- `/assess-risk` - Just assess deployment risk
-
-## Incident Severity Guidance
-
-**Use full workflow (all steps)** for:
-- Sev0/Sev1 incidents (critical/high severity)
-- Incidents with customer impact
-- Incidents requiring RCA
-
-**Use partial workflow** for:
-- Sev2/Sev3 incidents (lower severity)
-- Internal-only issues
-- Minor degradations
-
-## Error Handling
-
-If at any point the incident escalates:
-- Pause and reassess severity
-- Suggest escalating to full workflow if currently on partial path
-- Prioritize stabilization over documentation
-
-If the incident is resolved during triage:
-- Confirm resolution
-- Ask if incident review is still needed
-- Skip to follow-up if appropriate
+If the incident escalates during any step, pause and reassess severity. Prioritize stabilization over documentation. If resolved during triage, confirm resolution and ask if incident review is still needed.
 
 ## Output
 

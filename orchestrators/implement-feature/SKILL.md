@@ -90,36 +90,6 @@ After successful validation, update the backlog to reflect that the feature is s
 
 → Move the implemented feature from `Now / Next` to `In product (shipped)` in `.claude/artifacts/planning/product-backlog.md`
 
-## User Experience
-
-Running `/implement-feature` will guide you through the entire implementation process:
-
-1. **Selection**: Pick the next feature from the backlog
-2. **Planning**: Define requirements, write tests, break down tasks
-3. **Review**: Optionally review the plan for quality
-4. **Implementation**: Write code, run tests, commit in small chunks
-5. **Validation**: Verify the feature works as intended
-6. **Completion**: Update the backlog
-
-Each step can also be run independently if you need more control:
-- `/pick-feature` - Just pick a feature
-- `/plan-feature` - Just create a plan
-- `/review-plan` - Just review a plan
-- `/execute-plan` - Just implement a plan
-- `/validate-feature` - Just validate a feature
-
-## Error Handling
-
-If any step fails:
-- Stop and report the issue clearly
-- Suggest how to resolve it
-- Don't proceed to the next step until resolved
-
-If the user wants to stop mid-workflow:
-- Confirm where we are in the process
-- Document what's been completed
-- Explain how to resume later
-
 ## Output
 
 - Implemented feature code (committed to trunk)
