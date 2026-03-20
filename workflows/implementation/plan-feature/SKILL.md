@@ -1,6 +1,7 @@
 ---
 name: plan-feature
 description: Turn a selected backlog item into slices, tasks, and a concrete implementation plan with Gherkin specification. Create a detailed plan with observability, testing strategy, and task breakdown. Use after picking a feature.
+entry_point: true
 ---
 
 # Plan Feature

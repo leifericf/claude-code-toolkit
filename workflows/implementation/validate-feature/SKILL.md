@@ -1,6 +1,7 @@
 ---
 name: validate-feature
 description: Support user validation by turning issues into actionable follow-ups with clear reproduction steps and acceptance criteria. Surface ambiguity and missing coverage. Use after implementation is complete.
+entry_point: true
 ---
 
 # Validate

@@ -1,6 +1,7 @@
 ---
 name: triage-logs
 description: Turn noisy alerts and logs into structured, actionable analysis. Identify symptoms, assess impact, form hypotheses, and propose reversible mitigations. Use when triaging production signals or investigating issues.
+entry_point: true
 ---
 
 # Skill: Triage Logs

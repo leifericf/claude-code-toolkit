@@ -1,6 +1,7 @@
 ---
 name: assess-risk
 description: Perform pre-deployment risk assessment with rollout, monitoring, and rollback plans. Build a risk register and define go/no-go criteria. Use before deploying to production.
+entry_point: true
 ---
 
 # Skill: Assess Production Risk

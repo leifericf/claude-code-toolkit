@@ -1,6 +1,7 @@
 ---
 name: describe-problem
 description: Clarify the real user problem, constraints, stakeholders, and success criteria. Define WHAT must be built in user/business terms without discussing architecture or technology. Use when starting to plan a new project or feature.
+entry_point: true
 ---
 
 # Skill: Describe Problem

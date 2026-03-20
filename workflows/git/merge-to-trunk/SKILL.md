@@ -1,6 +1,7 @@
 ---
 name: merge-to-trunk
 description: Perform branch integration with linear history using rebase and fast-forward merge. Clean up commits, enforce Conventional Commits, and maintain safe Git operations. Use when integrating feature branches to trunk.
+entry_point: true
 ---
 
 # Skill: Merge to Trunk

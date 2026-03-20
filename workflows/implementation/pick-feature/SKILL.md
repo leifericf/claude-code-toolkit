@@ -1,6 +1,7 @@
 ---
 name: pick-feature
 description: Select the best next feature to implement from the backlog, optimizing for smallest end-user-visible value with low risk and clear acceptance criteria. Use when ready to start a new implementation cycle.
+entry_point: true
 ---
 
 # Pick Feature

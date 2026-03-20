@@ -1,6 +1,7 @@
 ---
 name: prepare-release
 description: Prepare a versioned release following Semantic Versioning with constellation codenames. Create release candidates or proper releases with appropriate version bumping. Use when creating a production release.
+entry_point: true
 ---
 
 # Skill: Prepare Release (SemVer + Constellation Codenames)

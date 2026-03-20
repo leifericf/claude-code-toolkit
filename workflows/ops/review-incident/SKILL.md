@@ -1,6 +1,7 @@
 ---
 name: review-incident
 description: Conduct blameless incident review focused on learning and preventing recurrence. Document impact, timeline, response, and action items. Use after an incident is resolved.
+entry_point: true
 ---
 
 # Skill: Review Incident
