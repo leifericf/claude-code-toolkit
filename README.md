@@ -22,15 +22,15 @@ cp -r ~/claude-code-toolkit/skills /path/to/your/project/.claude/skills
 
 **Note:** Claude Code's sandbox may block symlinks that point outside the project directory. If you encounter sandbox errors, use the copy approach instead.
 
-Then run `/setup/bootstrap` in Claude Code to initialize the project's artifact structure.
+Then run `/bootstrap-project` in Claude Code to initialize the project's artifact structure.
 
 ## Quick Start
 
-1. **Bootstrap**: `/setup/bootstrap` — creates `.claude/artifacts/` and initial files
-2. **Plan**: `/planning/describe-problem` — start the planning workflow
-3. **Build**: `/implementation/pick-feature` — start the implementation workflow
-4. **Ship**: `/git/merge-to-trunk` — merge to trunk with linear history
-5. **Release**: `/release/prepare-release` — create a versioned release
+1. **Bootstrap**: `/bootstrap-project` — creates `.claude/artifacts/` and initial files
+2. **Plan**: `/describe-problem` — start the planning workflow
+3. **Build**: `/pick-feature` — start the implementation workflow
+4. **Ship**: `/merge-to-trunk` — merge to trunk with linear history
+5. **Release**: `/prepare-release` — create a versioned release
 
 ## Skills Reference
 
@@ -47,39 +47,39 @@ Run these in order for a new project or major initiative:
 
 | Step | Skill | Output |
 |---|---|---|
-| 1 | `/planning/describe-problem` | `.claude/artifacts/planning/problem-description.md` |
-| 2 | `/planning/define-requirements` | `.claude/artifacts/planning/product-requirements.md` |
-| 3 | `/planning/review-risks` | `.claude/artifacts/planning/risk-assumption-review.md` |
-| 4 | `/planning/design-ux` (optional) | `.claude/artifacts/planning/ux-design-guide.md` |
-| 5 | `/planning/technical-design` | `.claude/artifacts/planning/technical-design.md` |
-| 6 | `/planning/create-backlog` | `.claude/artifacts/planning/product-backlog.md` |
+| 1 | `/describe-problem` | `.claude/artifacts/planning/problem-description.md` |
+| 2 | `/define-requirements` | `.claude/artifacts/planning/product-requirements.md` |
+| 3 | `/review-risks` | `.claude/artifacts/planning/risk-assumption-review.md` |
+| 4 | `/design-ux` (optional) | `.claude/artifacts/planning/ux-design-guide.md` |
+| 5 | `/design-technical` | `.claude/artifacts/planning/technical-design.md` |
+| 6 | `/create-backlog` | `.claude/artifacts/planning/product-backlog.md` |
 
 ### Implementation (Iterative Cycle)
 
 | Skill | Purpose |
 |---|---|
-| `/implementation/pick-feature` | Select the next feature from the backlog |
-| `/implementation/plan-feature` | Create a detailed implementation plan with Gherkin spec |
-| `/implementation/review-plan` | Quality review of an existing plan (optional) |
-| `/implementation/execute-plan` | Implement chunk by chunk with quality gates |
-| `/implementation/validate` | Structured validation pass with the user (optional) |
-| `/implementation/triage-backlog` | Reprioritize the backlog (optional) |
+| `/pick-feature` | Select the next feature from the backlog |
+| `/plan-feature` | Create a detailed implementation plan with Gherkin spec |
+| `/review-plan` | Quality review of an existing plan (optional) |
+| `/execute-plan` | Implement chunk by chunk with quality gates |
+| `/validate-feature` | Structured validation pass with the user (optional) |
+| `/triage-backlog` | Reprioritize the backlog (optional) |
 
 ### Git & Release
 
 | Skill | Purpose |
 |---|---|
-| `/git/merge-to-trunk` | Rebase + fast-forward merge (no merge commits) |
-| `/release/prepare-release` | SemVer release with constellation codenames |
+| `/merge-to-trunk` | Rebase + fast-forward merge (no merge commits) |
+| `/prepare-release` | SemVer release with constellation codenames |
 
 ### Operations
 
 | Skill | Purpose | Output |
 |---|---|---|
-| `/ops/triage-logs` | Turn alerts/logs into hypotheses + action plan | `.claude/artifacts/ops/YYYY-MM-DD_triage_<slug>.md` |
-| `/ops/assess-risk` | Pre-deploy go/no-go risk assessment | `.claude/artifacts/ops/YYYY-MM-DD_risk_<slug>.md` |
-| `/ops/review-incident` | Blameless incident review | `.claude/artifacts/ops/YYYY-MM-DD_incident_<slug>.md` |
-| `/ops/root-cause` | Root cause analysis | `.claude/artifacts/ops/YYYY-MM-DD_rca_<slug>.md` |
+| `/triage-logs` | Turn alerts/logs into hypotheses + action plan | `.claude/artifacts/ops/YYYY-MM-DD_triage_<slug>.md` |
+| `/assess-risk` | Pre-deploy go/no-go risk assessment | `.claude/artifacts/ops/YYYY-MM-DD_risk_<slug>.md` |
+| `/review-incident` | Blameless incident review | `.claude/artifacts/ops/YYYY-MM-DD_incident_<slug>.md` |
+| `/analyze-root-cause` | Root cause analysis | `.claude/artifacts/ops/YYYY-MM-DD_rca_<slug>.md` |
 
 ## Artifact Structure
 
@@ -121,21 +121,21 @@ projects/
 
 ### Full Planning Cycle
 ```
-/setup/bootstrap → /planning/describe-problem → /planning/define-requirements →
-/planning/review-risks → /planning/design-ux → /planning/technical-design →
-/planning/create-backlog
+/bootstrap-project → /describe-problem → /define-requirements →
+/review-risks → /design-ux → /design-technical →
+/create-backlog
 ```
 
 ### Implementation Loop
 ```
-/implementation/pick-feature → /implementation/plan-feature →
-/implementation/execute-plan → /implementation/validate →
-/implementation/triage-backlog → (repeat)
+/pick-feature → /plan-feature →
+/execute-plan → /validate-feature →
+/triage-backlog → (repeat)
 ```
 
 ### Ship
 ```
-/git/merge-to-trunk → /release/prepare-release
+/merge-to-trunk → /prepare-release
 ```
 
 ## Origins

@@ -1,3 +1,8 @@
+---
+name: review-risks
+description: Surface ambiguity, contradictions, risky assumptions, and missing acceptance criteria. Translate risks into testable questions and mitigations. Use after PRD is complete to prevent rework and identify potential issues early.
+---
+
 # Skill: Review Risks and Assumptions
 
 You are a quality engineer focused on preventing rework. Your focus is to surface ambiguity, contradictions, risky assumptions, and missing acceptance criteria. Translate risks into testable questions and mitigations. Do not ask questions that would not change implementation or validation.
@@ -83,4 +88,4 @@ Record any new open questions in `.claude/artifacts/decisions/open-questions.md`
 
 ### Step 5: Suggest Next Step
 
-> "Ready to lock decisions? If the project has a user-facing interface, run `/planning/design-ux`. Otherwise, skip to `/planning/technical-design`."
+> "Ready to lock decisions? If the project has a user-facing interface, run `/design-ux`. Otherwise, skip to `/design-technical`."

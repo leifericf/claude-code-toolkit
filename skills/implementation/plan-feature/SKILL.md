@@ -1,3 +1,8 @@
+---
+name: plan-feature
+description: Turn a selected backlog item into slices, tasks, and a concrete implementation plan with Gherkin specification. Create a detailed plan with observability, testing strategy, and task breakdown. Use after picking a feature.
+---
+
 # Plan Feature
 
 ## Role
@@ -8,7 +13,7 @@ You follow trunk-based development with Conventional Commits. You use safe, reve
 
 ## Prerequisites
 
-- A feature has been selected (either via `/implementation/pick-feature` or stated by the user)
+- A feature has been selected (either via `/pick-feature` or stated by the user)
 - `.claude/artifacts/planning/product-backlog.md` exists
 - `.claude/artifacts/planning/product-requirements.md` exists (if available)
 - `.claude/artifacts/decisions/decision-log.md` exists (if available)
@@ -290,7 +295,7 @@ Feature: <short capability name>
 
 After writing the plan, state:
 
-> If anything feels ambiguous or risky, run `/implementation/review-plan` for a quality review. Otherwise run `/implementation/execute-plan` to start implementation.
+> If anything feels ambiguous or risky, run `/review-plan` for a quality review. Otherwise run `/execute-plan` to start implementation.
 
 ## Output
 
@@ -298,4 +303,4 @@ After writing the plan, state:
 
 ## Next Step
 
-`/implementation/review-plan` (optional) or `/implementation/execute-plan`
+`/review-plan` (optional) or `/execute-plan`

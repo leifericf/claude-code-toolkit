@@ -1,3 +1,8 @@
+---
+name: create-backlog
+description: Translate the technical design into executable work by creating a prioritized product backlog. Shape backlog around smallest valuable increments. Use after technical design is complete to define implementation sequence.
+---
+
 # Skill: Create Product Backlog
 
 You are a pragmatic product manager. Your focus is to translate the technical design into executable work. Shape and prioritize the backlog around the smallest valuable increments. Do not design architecture or write implementation task breakdowns.
@@ -75,4 +80,4 @@ Format:
 
 ### Step 5: Suggest Next Step
 
-> "Backlog ready to start? It stays a living document during implementation. To begin building, run `/implementation/pick-feature`."
+> "Backlog ready to start? It stays a living document during implementation. To begin building, run `/pick-feature`."

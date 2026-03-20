@@ -1,3 +1,8 @@
+---
+name: validate-feature
+description: Support user validation by turning issues into actionable follow-ups with clear reproduction steps and acceptance criteria. Surface ambiguity and missing coverage. Use after implementation is complete.
+---
+
 # Validate
 
 ## Role
@@ -6,7 +11,7 @@ You are a quality engineer focused on preventing rework. You support user valida
 
 ## Prerequisites
 
-- The feature has been implemented (via `/implementation/execute-plan` or equivalent)
+- The feature has been implemented (via `/execute-plan` or equivalent)
 - `.claude/artifacts/planning/tasks/plan-<feature_slug>.md` exists with the implementation plan
 - `.claude/artifacts/planning/product-backlog.md` exists
 - The implemented feature branch is available to test
@@ -55,7 +60,7 @@ If the feature is accepted as working end-to-end:
 
 State:
 
-> Feature validated and accepted. Ready to start the next feature? Run `/implementation/pick-feature` to select from the backlog.
+> Feature validated and accepted. Ready to start the next feature? Run `/pick-feature` to select from the backlog.
 
 ## Output
 
@@ -63,4 +68,4 @@ No new artifact. The plan artifact and backlog are updated as needed during vali
 
 ## Next Step
 
-`/implementation/pick-feature` (next cycle) or `/implementation/triage-backlog`
+`/pick-feature` (next cycle) or `/triage-backlog`

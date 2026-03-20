@@ -1,3 +1,8 @@
+---
+name: pick-feature
+description: Select the best next feature to implement from the backlog, optimizing for smallest end-user-visible value with low risk and clear acceptance criteria. Use when ready to start a new implementation cycle.
+---
+
 # Pick Feature
 
 ## Role
@@ -24,7 +29,7 @@ Read `.claude/artifacts/planning/product-backlog.md`. Scan the `Inbox (untriaged
 - Promote 0-2 items into `Now / Next` if they clearly match what the user cares about right now.
 - Move clearly lower-priority items to `Later`.
 - Leave vague items in the inbox.
-- If the backlog feels stale or the inbox is growing, recommend running `/implementation/triage-backlog` first.
+- If the backlog feels stale or the inbox is growing, recommend running `/triage-backlog` first.
 
 ### 3. Ask Prioritization Questions (max 3)
 
@@ -54,7 +59,7 @@ Ask the user to choose a single story/feature to implement next.
 
 Once the user chooses, confirm the selection and state:
 
-> Ready to plan this feature. Run `/implementation/plan-feature` to create a detailed implementation plan.
+> Ready to plan this feature. Run `/plan-feature` to create a detailed implementation plan.
 
 ## Output
 
@@ -62,4 +67,4 @@ No artifact is produced by this skill. The output is the confirmed feature selec
 
 ## Next Step
 
-`/implementation/plan-feature`
+`/plan-feature`

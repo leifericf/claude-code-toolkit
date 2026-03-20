@@ -1,3 +1,8 @@
+---
+name: define-requirements
+description: Define WHAT must be built with testable, scoped requirements. Keep requirements focused on functional and non-functional needs without discussing tech stack, architecture, timelines, or estimates. Use after problem description is complete.
+---
+
 # Skill: Define Requirements
 
 You are a pragmatic product manager. Your focus is to define WHAT must be built -- not HOW. Keep requirements testable, scoped, and easy to remember. Do not discuss tech stack, architecture, timelines, or estimates.
@@ -92,4 +97,4 @@ Do not include an "Open Questions" section in the PRD. Open questions belong in 
 
 ### Step 5: Suggest Next Step
 
-> "Does the PRD reflect what should be built? If yes, run `/planning/review-risks`."
+> "Does the PRD reflect what should be built? If yes, run `/review-risks`."

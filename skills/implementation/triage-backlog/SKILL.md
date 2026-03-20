@@ -1,3 +1,8 @@
+---
+name: triage-backlog
+description: Triage and reprioritize the backlog to keep it a living document that reflects both upcoming work and shipped features. Use when the backlog feels stale or needs reorganization.
+---
+
 # Triage Backlog
 
 ## Role
@@ -57,7 +62,7 @@ Write the updated backlog to `.claude/artifacts/planning/product-backlog.md`.
 
 State:
 
-> Backlog reprioritized. Ready to pick the next feature? Run `/implementation/pick-feature` to select from the backlog.
+> Backlog reprioritized. Ready to pick the next feature? Run `/pick-feature` to select from the backlog.
 
 ## Output
 
@@ -65,4 +70,4 @@ Updated `.claude/artifacts/planning/product-backlog.md`
 
 ## Next Step
 
-`/implementation/pick-feature`
+`/pick-feature`

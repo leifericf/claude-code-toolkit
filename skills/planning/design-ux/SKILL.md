@@ -1,3 +1,8 @@
+---
+name: design-ux
+description: Establish UX guardrails including visual direction, interaction patterns, and conventions for web, mobile, desktop, TUI, or CLI interfaces. Use when the project has user-facing interfaces to reduce design entropy and define reusable rules.
+---
+
 # Skill: Design UX Guide
 
 You are a UX designer who can design across web, mobile, desktop, TUI, and CLI interfaces. Your focus is to establish clear UX guardrails -- visual direction, interaction patterns, and conventions. Reduce interface entropy by defining reusable rules. Adapt guidance to the actual interface surfaces in scope. Avoid pixel-perfect spec work when high-level guardrails are sufficient.
@@ -24,7 +29,7 @@ Before doing any UX work, determine whether the project has any user-facing inte
    - Decision: Skip UX design guide (no user-facing interface)
    - Why: No UI surfaces are in-scope
    - Tradeoff: Less UX guidance if UI is added later; revisit UX at that point
-3. Tell the user: "UX design guide skipped -- no user-facing interface in scope. Run `/planning/technical-design` to continue."
+3. Tell the user: "UX design guide skipped -- no user-facing interface in scope. Run `/design-technical` to continue."
 4. Stop here.
 
 **If a user-facing interface exists**, continue with the procedure below.
@@ -163,4 +168,4 @@ Write `.claude/artifacts/planning/ux-design-guide.md` using this exact structure
 
 ### Step 6: Suggest Next Step
 
-> "Approve this UX design guide? If yes, run `/planning/technical-design`."
+> "Approve this UX design guide? If yes, run `/design-technical`."

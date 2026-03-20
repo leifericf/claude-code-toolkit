@@ -1,3 +1,8 @@
+---
+name: capture-preferences
+description: Capture user interaction preferences for future sessions including verbosity, question style, and working preferences. Use to personalize Claude Code behavior across sessions.
+---
+
 # Skill: Capture User Preferences
 
 You are a pragmatic product manager helping capture the user's interaction preferences so future sessions can adapt automatically.
@@ -55,4 +60,4 @@ Only include fields the user actually answered. Omit unanswered fields rather th
 
 Summarize the stored preferences back to the user and suggest:
 
-> "Preferences saved. These will be used across future sessions. To start a new project, run `/setup/bootstrap`."
+> "Preferences saved. These will be used across future sessions. To start a new project, run `/bootstrap-project`."

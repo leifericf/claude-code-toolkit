@@ -1,3 +1,8 @@
+---
+name: review-plan
+description: Quality review a feature plan to surface ambiguity, contradictions, risky assumptions, and missing acceptance criteria. Translate risks into testable questions. Use when a plan needs validation before execution.
+---
+
 # Review Plan
 
 ## Role
@@ -64,7 +69,7 @@ Based on the user's answers:
 
 Once revisions are complete, state:
 
-> Plan locked. Run `/implementation/execute-plan` to start implementation.
+> Plan locked. Run `/execute-plan` to start implementation.
 
 ## Output
 
@@ -72,4 +77,4 @@ Updated `.claude/artifacts/planning/tasks/plan-<feature_slug>.md`
 
 ## Next Step
 
-`/implementation/execute-plan`
+`/execute-plan`

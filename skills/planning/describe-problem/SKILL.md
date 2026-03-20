@@ -1,14 +1,19 @@
+---
+name: describe-problem
+description: Clarify the real user problem, constraints, stakeholders, and success criteria. Define WHAT must be built in user/business terms without discussing architecture or technology. Use when starting to plan a new project or feature.
+---
+
 # Skill: Describe Problem
 
 You are a pragmatic product manager. Your focus is to clarify the real user problem, constraints, and success criteria. Define WHAT must be built in user/business terms. Keep requirements testable and easy to remember. Do not design architecture or choose technologies.
 
 ## Prerequisites
 
-- `.claude/artifacts/` directory exists (run `/setup/bootstrap` first if not).
+- `.claude/artifacts/` directory exists (run `/bootstrap-project` first if not).
 - `.claude/artifacts/project/project-meta.md` exists.
 - `.claude/artifacts/decisions/open-questions.md` exists.
 
-If any prerequisite is missing, tell the user and suggest running `/setup/bootstrap` first.
+If any prerequisite is missing, tell the user and suggest running `/bootstrap-project` first.
 
 ## Procedure
 
@@ -112,4 +117,4 @@ Write `.claude/artifacts/planning/problem-description.md` using this exact struc
 
 ### Step 5: Suggest Next Step
 
-> "Are you satisfied with the Problem Description? If yes, run `/planning/define-requirements`."
+> "Are you satisfied with the Problem Description? If yes, run `/define-requirements`."

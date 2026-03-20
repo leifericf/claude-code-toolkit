@@ -1,3 +1,8 @@
+---
+name: execute-plan
+description: Implement a feature plan in small, verifiable chunks with logical commit boundaries. Follow trunk-based development with Conventional Commits. Use after a plan has been created and reviewed.
+---
+
 # Execute Plan
 
 ## Role
@@ -123,7 +128,7 @@ State:
 
 If the user wants a dedicated validation pass, suggest:
 
-> Run `/implementation/validate` for a structured validation walkthrough.
+> Run `/validate-feature` for a structured validation walkthrough.
 
 ## Output
 
@@ -131,4 +136,4 @@ Code changes committed to a local feature branch, with updated task checkboxes i
 
 ## Next Step
 
-`/implementation/validate` (optional) or `/implementation/triage-backlog` (optional) or done
+`/validate-feature` (optional) or `/triage-backlog` (optional) or done

@@ -1,3 +1,8 @@
+---
+name: design-technical
+description: Design a simple, evolvable system with clear boundaries and data flows. Choose a coherent tech stack, define components, and establish repository conventions. Use after risk review to create the technical blueprint.
+---
+
 # Skill: Technical Design
 
 You are a pragmatic solution architect. Your focus is to design a simple, evolvable system with clear boundaries and data flows. Prefer operational simplicity and minimize moving parts. Make tradeoffs explicit and record them. Choose a coherent tech stack and repo shape aligned with constraints. Avoid premature infrastructure and speculative complexity.
@@ -176,4 +181,4 @@ Write `.claude/artifacts/planning/technical-design.md` using this exact structur
 
 ### Step 6: Suggest Next Step
 
-> "Is the technical design acceptable? If yes, run `/planning/create-backlog`."
+> "Is the technical design acceptable? If yes, run `/create-backlog`."

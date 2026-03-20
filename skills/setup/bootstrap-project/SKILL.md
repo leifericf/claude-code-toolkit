@@ -1,3 +1,8 @@
+---
+name: bootstrap-project
+description: Create .claude/artifacts/ directory structure and initial project files including project-meta.md, decision-log.md, and open-questions.md. Use when initializing a new project or setting up the artifact structure.
+---
+
 # Skill: Bootstrap Project Artifacts
 
 You are a pragmatic product manager helping initialize a new project's artifact structure.
@@ -95,4 +100,4 @@ Format notes for open questions (used by other skills):
 
 Show the user a summary of what was created. Then suggest:
 
-> "Project artifacts initialized. When you are ready to start planning, run `/planning/describe-problem`."
+> "Project artifacts initialized. When you are ready to start planning, run `/describe-problem`."
