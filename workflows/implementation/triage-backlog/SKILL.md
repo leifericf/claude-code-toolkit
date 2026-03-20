@@ -59,10 +59,6 @@ Based on the user's answers, rewrite the backlog so it stays clean and actionabl
 
 Write the updated backlog to `.claude/artifacts/planning/product-backlog.md`.
 
-### 6. Write the Updated Backlog
-
-Write the updated backlog to `.claude/artifacts/planning/product-backlog.md`.
-
 ## Output
 
 Updated `.claude/artifacts/planning/product-backlog.md`

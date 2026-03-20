@@ -91,28 +91,6 @@ By running assessments in parallel:
 - **Consistency**: Each dimension gets focused attention from a specialist
 - **Independence**: Each assessment is self-contained and doesn't block others
 
-## Output
-
-Return a structured object to the parent workflow:
-
-```yaml
-quality_gates:
-  observability:
-    applicability: Required | N/A
-    <other fields from assess-observability primitive>
-  testing:
-    tier_0: {...}
-    tier_1: {...}
-    tier_2: {...}
-    <other fields from assess-testing primitive>
-  data:
-    applicability: Required | N/A
-    <other fields from assess-data primitive>
-  rollout:
-    applicability: Required | N/A
-    <other fields from assess-rollout primitive>
-```
-
 ## Example
 
 **Input**: Gherkin spec for a payment processing feature

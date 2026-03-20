@@ -136,15 +136,6 @@ Report to the user:
 - The current branch (must be trunk)
 - A reminder that nothing has been pushed (unless they asked)
 
-## Output
-
-Report to the user:
-- The merged branch name
-- Confirmation that fast-forward merge was used (no merge commit)
-- Whether the local feature branch was deleted
-- The current branch (must be trunk)
-- A reminder that nothing has been pushed (unless they asked)
-
 ## Next Step
 
 Push trunk to remote (if user wants), or `/prepare-release` -- Create a versioned release.

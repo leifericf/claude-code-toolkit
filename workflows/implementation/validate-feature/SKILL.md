@@ -57,14 +57,6 @@ If the feature is accepted as working end-to-end:
 - Ensure manual scenario artifacts are updated if user-visible behavior changed.
 - Ensure new scenarios are added for newly introduced flows.
 
-### 6. Confirm Acceptance
-
-If the feature is accepted as working end-to-end:
-
-- Ensure the implemented backlog item is moved to `In product (shipped)` in `.claude/artifacts/planning/product-backlog.md`.
-- Ensure manual scenario artifacts are updated if user-visible behavior changed.
-- Ensure new scenarios are added for newly introduced flows.
-
 ## Output
 
 No new artifact. The plan artifact and backlog are updated as needed during validation.
