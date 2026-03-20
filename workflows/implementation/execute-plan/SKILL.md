@@ -74,9 +74,8 @@ Repeat until all tasks are done:
 
 ### 7. Quality Gate (After Each Task)
 
-Run the project's standard commands (format, lint, test, build if present):
+Run `/quality-gate` to execute format, lint, test, and build checks in parallel.
 
-- Assume automation will fail on first run.
 - Fix issues with the smallest safe change.
 - Add tests when you find uncovered behavior.
 - For bug fixes: identify why existing automation missed it, then add/adjust tests.

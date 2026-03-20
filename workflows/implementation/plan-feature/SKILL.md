@@ -76,51 +76,9 @@ Structure:
 - Each scenario describes one behavior. Given = preconditions; When = action; Then = observable result.
 - Assert externally visible state (API response, persisted state, user-facing text) over internal details.
 
-### 4. Assess Embedded Gates
+### 4. Assess Quality Gates
 
-For each of the following, determine applicability. Mark `N/A` with a one-line reason when not applicable.
-
-#### Observability (Minimum Viable)
-
-Required when the feature touches: money, auth/access control, permissions, account state, irreversible actions, PII/sensitive data, data loss/corruption/duplication risk, integration boundaries, scheduled/async flows.
-
-When required, capture:
-- **Failure modes** (3-6 bullets): what can break and how it should degrade
-- **Logs** (structured) at boundaries: event names, level (info/warn/error), minimal fields, correlation ID, confirm no secrets/PII logged
-- **Signals/metrics** (at least one for critical flows): what indicates success vs. failure
-
-#### Testing Strategy (Tier 0/1/2)
-
-- **Tier 0** (required for all user-visible changes): unit tests + deterministic fakes + contract tests
-- **Tier 1** (when touching persistence, migrations, background jobs, integration boundaries): containerized or local deterministic integration tests
-- **Tier 2** (only when correctness depends on third-party behavior that cannot be simulated): sandbox/external dependency tests; allow retry + quarantine for flakiness
-
-When the product has user-visible flows and an E2E/journey suite exists or is being introduced, include an E2E strategy.
-
-Target the default local/CI loop under ~5 minutes. Run Tier 0 frequently, Tier 1 when integration-affecting chunks land, Tier 2 on demand.
-
-#### Data and Migrations
-
-When the feature changes schema, stored data shape, or requires backfill:
-- Migration type: schema only | backfill | expand/contract
-- Up migration: required
-- Down migration: preferred when safe (state why if not)
-- Expand/contract strategy (when old and new code may run concurrently): expand first, ship compatible code, contract later
-- Backfill plan: online vs. offline, idempotency, restartability, partial-rollback behavior
-- Rollback plan: what happens if migration fails or deploy is reverted
-
-Safety notes:
-- Prefer separate deploy steps for schema migrations and data backfills.
-- Be explicit when a down migration is fragile.
-- Avoid combining large data rewrites with DDL in one migration.
-
-#### Rollout and Verification
-
-When the feature will be deployed to real users:
-- Strategy: feature flag | canary | staged | all-at-once
-- Guardrails: what triggers a pause/rollback
-- Verification: the one "smoke" path to confirm post-deploy
-- Signals to watch: 1-3 key signals
+Run `/assess-quality-gates` to evaluate observability, testing, data, and rollout concerns in parallel. Review the returned assessment and incorporate the results into the plan artifact (section by section).
 
 ### 5. Plan Chunks and Tasks
 
