@@ -96,23 +96,6 @@ test_check:
 
 ## Example
 
-**Input**: Node.js project with Jest
-
-**Output**:
-```yaml
-test_check:
-  status: pass
-  framework: Jest
-  command: npm test
-  results:
-    passed: 42
-    failed: 0
-    skipped: 3
-    duration_seconds: 12.3
-  failures: []
-  suggestion: null
-```
-
 **Input**: Python project with pytest, some failures
 
 **Output**:

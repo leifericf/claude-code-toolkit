@@ -93,19 +93,6 @@ build_check:
 
 ## Example
 
-**Input**: Node.js project with webpack
-
-**Output**:
-```yaml
-build_check:
-  status: pass
-  build_system: webpack
-  command: npm run build
-  duration_seconds: 45.2
-  errors: []
-  suggestion: null
-```
-
 **Input**: Rust project with compilation error
 
 **Output**:
@@ -120,17 +107,4 @@ build_check:
       line: 42
       message: mismatched types: expected `PaymentMethod`, found `&str`
   suggestion: "Fix type error at src/payment.rs:42, then re-run 'cargo build --release'"
-```
-
-**Input**: Python project (no build step)
-
-**Output**:
-```yaml
-build_check:
-  status: skipped
-  build_system: manual
-  command: null
-  duration_seconds: null
-  errors: []
-  suggestion: "No build step detected. Python projects typically use tests instead of builds."
 ```

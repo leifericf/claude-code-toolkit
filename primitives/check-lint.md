@@ -94,21 +94,6 @@ lint_check:
 
 ## Example
 
-**Input**: Node.js project with ESLint
-
-**Output**:
-```yaml
-lint_check:
-  status: pass
-  tool: ESLint
-  command: npx eslint .
-  issues:
-    error_count: 0
-    warning_count: 0
-    sample_errors: []
-  suggestion: null
-```
-
 **Input**: Python project with Ruff, some issues
 
 **Output**:

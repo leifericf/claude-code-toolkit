@@ -99,15 +99,3 @@ format_check:
   files_needing_formatting: []
   suggestion: null
 ```
-
-**Input**: Python project with no formatting configured
-
-**Output**:
-```yaml
-format_check:
-  status: skipped
-  tool: manual
-  command: null
-  files_needing_formatting: null
-  suggestion: "No formatter detected. Run 'black .' or 'ruff format .' to format Python code."
-```

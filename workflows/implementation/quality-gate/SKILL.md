@@ -116,30 +116,6 @@ quality_gate:
 
 ## Example
 
-**All checks pass**:
-```yaml
-quality_gate:
-  overall_status: pass
-  execution_time_seconds: 45.2
-  checks:
-    format:
-      status: pass
-      tool: Prettier
-    lint:
-      status: pass
-      tool: ESLint
-    tests:
-      status: pass
-      framework: Jest
-      passed: 42
-      failed: 0
-    build:
-      status: pass
-      build_system: webpack
-  next_steps: All checks passed! Ready to commit.
-```
-
-**Some checks fail**:
 ```yaml
 quality_gate:
   overall_status: fail
