@@ -1,0 +1,4 @@
+# Claude Code personal files
+.claude/settings.local.json
+.claude/plans/
+.claude/projects/
