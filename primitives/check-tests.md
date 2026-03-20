@@ -5,7 +5,7 @@ user-invocable: false
 allowed-tools: ["Bash"]
 ---
 
-# Primitive: Check Tests
+# Check Tests
 
 You run the test suite to verify code correctness.
 

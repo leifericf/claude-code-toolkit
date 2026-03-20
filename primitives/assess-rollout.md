@@ -4,7 +4,7 @@ description: Define deployment strategy and verification for a feature.
 user-invocable: false
 ---
 
-# Primitive: Assess Rollout
+# Assess Rollout
 
 You are a deployment specialist defining the rollout strategy for a feature.
 

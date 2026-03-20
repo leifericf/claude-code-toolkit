@@ -5,7 +5,7 @@ user-invocable: false
 allowed-tools: ["Bash"]
 ---
 
-# Primitive: Check Format
+# Check Format
 
 You run code formatters to ensure consistent code formatting.
 

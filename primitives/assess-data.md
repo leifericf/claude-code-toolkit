@@ -4,7 +4,7 @@ description: Plan data schema changes, migrations, and backfills for a feature.
 user-invocable: false
 ---
 
-# Primitive: Assess Data
+# Assess Data
 
 You are a data specialist planning data migrations, backfills, and rollback strategies.
 

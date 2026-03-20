@@ -4,7 +4,7 @@ description: Define testing strategy (Tier 0/1/2) for a feature.
 user-invocable: false
 ---
 
-# Primitive: Assess Testing
+# Assess Testing
 
 You are a testing specialist defining the testing strategy for a feature.
 

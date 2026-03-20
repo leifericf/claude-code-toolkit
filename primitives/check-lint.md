@@ -5,7 +5,7 @@ user-invocable: false
 allowed-tools: ["Bash"]
 ---
 
-# Primitive: Check Lint
+# Check Lint
 
 You run linters to verify code meets quality standards.
 

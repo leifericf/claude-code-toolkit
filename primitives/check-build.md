@@ -5,7 +5,7 @@ user-invocable: false
 allowed-tools: ["Bash"]
 ---
 
-# Primitive: Check Build
+# Check Build
 
 You run the build process to verify the project compiles or bundles successfully.
 

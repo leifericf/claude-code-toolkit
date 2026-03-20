@@ -4,7 +4,7 @@ description: Determine observability needs (logging, metrics, tracing) for a fea
 user-invocable: false
 ---
 
-# Primitive: Assess Observability
+# Assess Observability
 
 You are an observability specialist assessing a feature's monitoring and observability needs.
 

@@ -83,44 +83,6 @@ The parent workflow will:
 - Surface any N/A findings with reasons
 - Highlight any required gates that need attention
 
-## Example
-
-**Input**: Gherkin spec for a payment processing feature
-
-**Output**:
-```yaml
-quality_gates:
-  observability:
-    applicability: Required
-    failure_modes:
-      - Payment gateway timeout → Queue payment, retry with backoff
-    logs:
-      events: [payment_attempt, payment_success, payment_failure]
-    signals:
-      - name: payment_success_rate
-        healthy_threshold: "> 95%"
-  testing:
-    tier_0:
-      required: true
-      approach: Unit tests with mocked dependencies
-    tier_1:
-      required: true
-      approach: Integration tests with test database
-    tier_2:
-      required: false
-  data:
-    applicability: Required
-    migration_type: schema_only
-    up_migration:
-      description: Add payments table and indexes
-  rollout:
-    applicability: Required
-    strategy: feature_flag
-    guardrails:
-      - trigger: Checkout error rate spike > 5%
-        action: rollback immediately
-```
-
 ## Output
 
 Return a structured object to the parent workflow:
