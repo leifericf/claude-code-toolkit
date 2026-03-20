@@ -1,6 +1,6 @@
 ---
 name: setup-project
-description: Set up a new project from scratch. High-level orchestrator for the setup phase.
+description: Set up a new project by capturing user preferences and bootstrapping artifact structure. Use when starting a new project or initializing Claude Code for the first time.
 disable-model-invocation: true
 ---
 

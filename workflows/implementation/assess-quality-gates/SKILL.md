@@ -1,6 +1,6 @@
 ---
 name: assess-quality-gates
-description: Assess multiple quality dimensions in parallel (observability, testing, data, rollout).
+description: Assess observability, testing, data migration, and rollout readiness in parallel. Use during planning to define quality requirements.
 ---
 
 # Assess Quality Gates

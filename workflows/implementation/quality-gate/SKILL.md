@@ -1,6 +1,6 @@
 ---
 name: quality-gate
-description: Run quality checks (format, lint, test, build) in parallel.
+description: Run format, lint, test, and build checks in parallel and report pass/fail. Use after code changes to verify quality before committing.
 ---
 
 # Quality Gate

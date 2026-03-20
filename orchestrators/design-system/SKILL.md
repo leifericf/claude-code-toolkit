@@ -1,6 +1,6 @@
 ---
 name: design-system
-description: Design a complete system from problem to backlog. High-level orchestrator for the design phase.
+description: Design a system from problem description through requirements, risks, UX, technical architecture, and backlog creation. Use when starting a new project or major redesign.
 disable-model-invocation: true
 ---
 
