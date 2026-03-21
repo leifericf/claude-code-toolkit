@@ -35,19 +35,19 @@ Launch 4 sub-agents in parallel using the Task tool:
 
 ```yaml
 Sub-agent 1: assess-observability
-  → Read skills/assess-observability/SKILL.md
+  → Invoke /assess-observability
   → Assess observability needs (logging, metrics, tracing)
 
 Sub-agent 2: assess-testing
-  → Read skills/assess-testing/SKILL.md
+  → Invoke /assess-testing
   → Define testing strategy (Tier 0/1/2)
 
 Sub-agent 3: assess-data
-  → Read skills/assess-data/SKILL.md
+  → Invoke /assess-data
   → Plan data schema changes, migrations, backfills
 
 Sub-agent 4: assess-rollout
-  → Read skills/assess-rollout/SKILL.md
+  → Invoke /assess-rollout
   → Define deployment strategy and verification
 ```
 

@@ -22,19 +22,19 @@ Launch 4 sub-agents in parallel using the Task tool:
 
 ```yaml
 Sub-agent 1: check-format
-  → Read skills/check-format/SKILL.md
+  → Invoke /check-format
   → Run code formatters
 
 Sub-agent 2: check-lint
-  → Read skills/check-lint/SKILL.md
+  → Invoke /check-lint
   → Run linters
 
 Sub-agent 3: check-tests
-  → Read skills/check-tests/SKILL.md
+  → Invoke /check-tests
   → Run test suite
 
 Sub-agent 4: check-build
-  → Read skills/check-build/SKILL.md
+  → Invoke /check-build
   → Run build process
 ```
 

@@ -245,10 +245,10 @@ You get fine-grained control over each step.
 Launch primitives via the Task tool:
 ```yaml
 Launch 4 primitives in parallel:
-  → Task: Read skills/assess-observability/SKILL.md
-  → Task: Read skills/assess-testing/SKILL.md
-  → Task: Read skills/assess-data/SKILL.md
-  → Task: Read skills/assess-rollout/SKILL.md
+  → Task: Invoke /assess-observability
+  → Task: Invoke /assess-testing
+  → Task: Invoke /assess-data
+  → Task: Invoke /assess-rollout
 Wait for all to complete
 Merge results
 ```
