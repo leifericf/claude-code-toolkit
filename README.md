@@ -24,6 +24,8 @@ One command handles the complete implementation workflow:
 /setup-project         # Set up a new project
 /merge-to-trunk        # Merge a feature branch to trunk
 /prepare-release       # Prepare a versioned release
+/audit-codebase        # Audit for bugs, security, and UX/UI issues
+/remediate-issues      # Fix all discovered issues across all tracks
 ```
 
 ### Fine-Grained Control
@@ -45,6 +47,10 @@ Need more control? Run individual workflows directly:
 /review-plan
 /validate-feature
 /triage-backlog
+
+# Issue discovery and remediation workflows
+/find-issues
+/fix-issues
 
 # Operations workflows
 /triage-logs
@@ -101,7 +107,7 @@ Then run `/setup-project` in Claude Code to initialize the project's artifact st
 
 - **Most of the time**: You'll run an orchestrator
 - **Benefit**: One command handles everything automatically
-- **Count**: 6 orchestrators
+- **Count**: 8 orchestrators
 
 ### Layer 2: Workflows
 
@@ -109,7 +115,7 @@ Then run `/setup-project` in Claude Code to initialize the project's artifact st
 
 - **Sometimes**: You'll run a workflow directly for fine-grained control
 - **Benefit**: Each workflow is independently useful and reusable
-- **Count**: 20 workflows
+- **Count**: 22 workflows
 
 ### Layer 3: Primitives (`user-invocable: false`)
 
@@ -117,9 +123,9 @@ Then run `/setup-project` in Claude Code to initialize the project's artifact st
 
 - **Never**: You'll invoke primitives directly
 - **Benefit**: Enable parallel execution, reusable components
-- **Count**: 8 primitives
+- **Count**: 11 primitives
 
-All 34 skills live in a flat `skills/` directory. Layers are distinguished by frontmatter fields, not directory structure.
+All 41 skills live in a flat `skills/` directory. Layers are distinguished by frontmatter fields, not directory structure.
 
 ## Design Principles
 
@@ -184,6 +190,8 @@ claude-code-toolkit/
     ├── setup-project/SKILL.md       # Orchestrator
     ├── merge-to-trunk/SKILL.md      # Orchestrator
     ├── prepare-release/SKILL.md     # Orchestrator
+    ├── audit-codebase/SKILL.md      # Orchestrator
+    ├── remediate-issues/SKILL.md    # Orchestrator
     ├── bootstrap-project/SKILL.md   # Workflow
     ├── capture-preferences/SKILL.md # Workflow
     ├── describe-problem/SKILL.md    # Workflow
@@ -206,6 +214,8 @@ claude-code-toolkit/
     ├── review-incident/SKILL.md     # Workflow
     ├── analyze-root-cause/SKILL.md  # Workflow
     ├── assess-risk/SKILL.md         # Workflow
+    ├── find-issues/SKILL.md         # Workflow
+    ├── fix-issues/SKILL.md          # Workflow
     ├── assess-observability/SKILL.md# Primitive (hidden)
     ├── assess-testing/SKILL.md      # Primitive (hidden)
     ├── assess-data/SKILL.md         # Primitive (hidden)
@@ -213,7 +223,10 @@ claude-code-toolkit/
     ├── check-format/SKILL.md        # Primitive (hidden)
     ├── check-lint/SKILL.md          # Primitive (hidden)
     ├── check-tests/SKILL.md         # Primitive (hidden)
-    └── check-build/SKILL.md         # Primitive (hidden)
+    ├── check-build/SKILL.md         # Primitive (hidden)
+    ├── discover-bugs/SKILL.md       # Primitive (hidden)
+    ├── discover-security-issues/SKILL.md # Primitive (hidden)
+    └── discover-ux-issues/SKILL.md  # Primitive (hidden)
 ```
 
 ## How to Use
@@ -265,7 +278,7 @@ Created by `/setup-project` inside your project's `.claude/` directory:
       tasks/               # Feature implementation plans
     decisions/             # Decision log, open questions
     project/               # Project meta, release tracking
-    ops/                   # Incident reviews, RCAs, risk assessments
+    ops/                   # Incident reviews, RCAs, risk assessments, issue lists
 ```
 
 Commit `skills` and `artifacts` to your repo so the team shares them. Add a `.claude/.gitignore` to exclude personal files:
@@ -294,6 +307,11 @@ projects/
 ```
 /design-system → /implement-feature →
 /incident-response → (repeat)
+```
+
+### Issue Discovery and Remediation
+```
+/audit-codebase → /remediate-issues → /audit-codebase (verify)
 ```
 
 ### Ship
