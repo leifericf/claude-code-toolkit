@@ -68,9 +68,11 @@ git clone https://github.com/leifericf/claude-code-toolkit.git ~/claude-code-too
 # Symlink into your project (macOS, Linux, WSL):
 mkdir -p /path/to/your/project/.claude
 ln -s ~/claude-code-toolkit/skills /path/to/your/project/.claude/skills
+ln -s ~/claude-code-toolkit/agents /path/to/your/project/.claude/agents
 
 # Or copy if you prefer a standalone snapshot:
 cp -r ~/claude-code-toolkit/skills /path/to/your/project/.claude/skills
+cp -r ~/claude-code-toolkit/agents /path/to/your/project/.claude/agents
 ```
 
 **Note:** Symlinks work on macOS, Linux, and WSL. Native Windows does not reliably support symlinks — use WSL or copy instead.
@@ -272,7 +274,8 @@ Created by `/setup-project` inside your project's `.claude/` directory:
 
 ```
 .claude/
-  skills/                  # The toolkit (symlinked or copied from this repo)
+  skills/                  # Skills (symlinked or copied from this repo)
+  agents/                  # Custom subagent types (symlinked or copied from this repo)
   artifacts/
     planning/              # Backlog, requirements, problem description, designs
       tasks/               # Feature implementation plans
@@ -281,7 +284,7 @@ Created by `/setup-project` inside your project's `.claude/` directory:
     ops/                   # Incident reviews, RCAs, risk assessments, issue lists
 ```
 
-Commit `skills` and `artifacts` to your repo so the team shares them. Add a `.claude/.gitignore` to exclude personal files:
+Commit `skills`, `agents`, and `artifacts` to your repo so the team shares them. Add a `.claude/.gitignore` to exclude personal files:
 
 ```gitignore
 # Personal settings (not shared)
