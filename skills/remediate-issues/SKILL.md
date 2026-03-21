@@ -48,74 +48,47 @@ Present the grouping to the user:
 - Which batches can run in parallel vs must be sequential
 - User confirms or overrides to force sequential mode
 
-### 3. Fix Security Issues
+### 3. Launch All Fixes
 
-**If independent batches exist within the security track:**
+**CRITICAL: Maximize concurrency across ALL tracks, not just within a single track.** The grouping in step 2 already identifies independent batches by code area — batches that don't share files can run concurrently regardless of whether they contain security, bug, or UX/UI issues.
 
-Launch one `issue-fixer` subagent per independent batch using the Agent tool:
+Launch ALL independent batches in a SINGLE message using the Agent tool:
+- One `issue-fixer` subagent per independent batch
 - `subagent_type: issue-fixer`
 - `isolation: worktree` (each gets its own isolated git worktree)
-- Task prompt contains ONLY: issue type (security), area scope, filtered issue list
+- Task prompt contains: issue type(s), area scope, filtered issue list for that batch
+- A batch may contain issues from multiple tracks (security + bugs + UX/UI) if they touch the same area
 
-Each subagent runs concurrently with a lean, focused context — only its assigned issues and area files.
+Example: if you have 6 independent batches across all 3 tracks, launch all 6 as Agent subagents in one message. They all run concurrently.
 
-**If all security issues overlap or user chose sequential:**
+**Ordering within a batch**: If a single batch contains issues from multiple tracks, the subagent should fix them in priority order: security first, then bugs, then UX/UI.
 
-→ Run: `/fix-issues` inline
+**If ALL issues overlap into a single batch** (no parallelism possible):
+Fix inline sequentially: security → bugs → UX/UI.
 
-Provide: type = security
+### 4. Integrate Fixes
 
-### 4. Integrate Security Fixes (if parallel)
-
-If parallel subagents were used:
-- Rebase each worktree branch onto the fix branch (`git rebase`)
+Once all subagents complete:
+- Stash any working directory changes
+- Remove worktrees to unlock branches
+- Rebase each branch onto main in dependency order (independent branches in any order)
 - Fast-forward merge (`git merge --ff-only`) — never use `--no-ff`
 - Result: linear commit history, no merge commits
 - If rebase conflicts: stop and report (should be rare given area independence)
-- Consolidate issue artifacts: read each worktree's updated artifact, merge all fixed-row removals into the canonical artifact
-- Worktrees are cleaned up automatically by Claude Code
+- Clean up merged branches and restore stash
 
-### 5. Security Checkpoint
+### 5. Checkpoint
 
-Report:
-- Security issues fixed (count)
-- Remaining security issues by severity
+Report per track:
+- Issues fixed (count) by track (security / bugs / UX/UI)
+- Remaining issues by severity
 - Any blockers or missing data
 
-### 6. Fix Bugs
-
-Same parallel/sequential decision as step 3, applied to the bugs track.
-
-**Parallel**: Launch `issue-fixer` subagents per independent batch with `isolation: worktree`.
-**Sequential**: → Run: `/fix-issues` inline with type = bugs.
-
-### 7. Integrate Bug Fixes (if parallel)
-
-Same integration procedure as step 4.
-
-### 8. Bug Checkpoint
-
-Report:
-- Bugs fixed (count)
-- Remaining bugs by severity
-- Any blockers or missing data
-
-### 9. Fix UX/UI Issues
-
-Same parallel/sequential decision as step 3, applied to the UX/UI track.
-
-**Parallel**: Launch `issue-fixer` subagents per independent batch with `isolation: worktree`.
-**Sequential**: → Run: `/fix-issues` inline with type = ux-ui.
-
-### 10. Integrate UX/UI Fixes (if parallel)
-
-Same integration procedure as step 4.
-
-### 11. Final Quality Gate
+### 6. Final Quality Gate
 
 Run the full quality check suite directly (format, lint, test, build) and fix any failures.
 
-### 12. Present Summary
+### 7. Present Summary
 
 Report:
 - What was fixed by track (security / bugs / UX/UI)
