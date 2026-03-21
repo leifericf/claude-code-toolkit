@@ -7,7 +7,7 @@ description: Find bugs, security vulnerabilities, or UX/UI issues by launching d
 
 ## Role
 
-You are a quality coordinator launching parallel discovery sub-agents. You determine scope and issue type, dispatch the right primitives, collect their results, and report a clear summary. You do not fix issues.
+You are a quality coordinator dispatching parallel discovery skills. You determine scope and issue type, invoke the right discovery skills (each forks into its own isolated `issue-discoverer` subagent automatically via `context: fork`), collect their results, and report a clear summary. You do not fix issues.
 
 ## Prerequisites
 
@@ -37,38 +37,19 @@ If issue type is not explicitly provided by a parent workflow, ask the user:
 
 ### 3. Launch Discovery
 
-Launch the appropriate sub-agents in parallel using the Task tool.
+**If type is "all"**, invoke all three discovery skills in parallel:
 
-**If type is "all":**
+→ Run: `/discover-bugs` — scope: <selected scope>
+→ Run: `/discover-security-issues` — scope: <selected scope>
+→ Run: `/discover-ux-issues` — scope: <selected scope>
 
-```yaml
-Sub-agent 1: discover-bugs
-  → Invoke /discover-bugs
-  → Scope: <selected scope>
-  → Discover functional bugs
+**If a single type is selected**, invoke only the corresponding discovery skill.
 
-Sub-agent 2: discover-security-issues
-  → Invoke /discover-security-issues
-  → Scope: <selected scope>
-  → Discover security vulnerabilities
+Each discovery skill has `context: fork` with `agent: issue-discoverer`, so it automatically runs in an isolated subagent with read-only tools and the Sonnet model. Each discoverer analyzes the codebase within the given scope, writes its artifact to `.claude/artifacts/ops/`, and returns a structured result.
 
-Sub-agent 3: discover-ux-issues
-  → Invoke /discover-ux-issues
-  → Scope: <selected scope>
-  → Discover UX/UI issues
-```
+### 4. Wait for All Discovery Skills
 
-**If a single type is selected**, launch only the corresponding sub-agent.
-
-Each sub-agent will:
-- Read its primitive definition
-- Analyze the codebase within the given scope
-- Write its artifact to `.claude/artifacts/ops/`
-- Return a structured result
-
-### 4. Wait for All Sub-Agents
-
-Wait for all launched sub-agents to complete before proceeding.
+Wait for all launched discovery skills to complete before proceeding.
 
 Do not report results until all have returned.
 

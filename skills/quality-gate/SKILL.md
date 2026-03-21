@@ -18,31 +18,14 @@ You are a quality assurance coordinator orchestrating parallel quality checks. Y
 
 ### 1. Launch Parallel Checks
 
-Launch 4 sub-agents in parallel using the Task tool:
+Launch the following sub-agents in parallel:
 
-```yaml
-Sub-agent 1: check-format
-  → Invoke /check-format
-  → Run code formatters
+→ Run: `/check-format` — run code formatters
+→ Run: `/check-lint` — run linters
+→ Run: `/check-tests` — run test suite
+→ Run: `/check-build` — run build process
 
-Sub-agent 2: check-lint
-  → Invoke /check-lint
-  → Run linters
-
-Sub-agent 3: check-tests
-  → Invoke /check-tests
-  → Run test suite
-
-Sub-agent 4: check-build
-  → Invoke /check-build
-  → Run build process
-```
-
-Each sub-agent will:
-- Read its primitive definition
-- Detect appropriate tools from project configuration
-- Run the check
-- Return a structured result
+Each sub-agent will detect appropriate tools from project configuration, run its check, and return a structured result.
 
 ### 2. Wait for All Checks
 

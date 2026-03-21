@@ -73,7 +73,11 @@ Repeat until all tasks are done:
 
 ### 7. Quality Gate (After Each Task)
 
-Run `/quality-gate` to execute format, lint, test, and build checks in parallel.
+Run quality checks directly (do not invoke `/quality-gate` or launch subagents):
+1. Detect and run the project's formatter in check mode
+2. Detect and run the project's linter
+3. Detect and run the project's test runner
+4. Detect and run the project's build command
 
 - Fix issues with the smallest safe change.
 - Add tests when you find uncovered behavior.

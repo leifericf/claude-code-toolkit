@@ -2,6 +2,8 @@
 name: discover-bugs
 description: Discover bugs using deterministic analysis with severity, priority, and complexity classification.
 user-invocable: false
+context: fork
+agent: issue-discoverer
 ---
 
 # Discover Bugs

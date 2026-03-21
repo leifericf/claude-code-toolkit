@@ -19,20 +19,25 @@ You are a senior software engineer fixing issues methodically. You fix one issue
 
 ## Procedure
 
-### 1. Determine Issue Type
+### 1. Determine Scope
 
-If issue type is not explicitly provided by a parent workflow, ask the user:
+**Issue type**: If not explicitly provided by a parent workflow, ask the user:
 
 > Which issue type do you want to fix?
 > - **Bugs** — from `.claude/artifacts/ops/bug-list.md`
 > - **Security** — from `.claude/artifacts/ops/security-issue-list.md`
 > - **UX/UI** — from `.claude/artifacts/ops/ux-ui-issue-list.md`
 
+**Area scope** (optional): If area scope is provided by a parent workflow (e.g., `areas: auth, payments`), filter the issue artifact to only process issues whose `area` column matches. Skip issues outside scope — another subagent may handle them.
+
+**Issue subset** (optional): If a specific list of issues is provided (by summary or position), process only those.
+
 ### 2. Preflight
 
 - Confirm you are on a clean, green trunk or an appropriate fix branch.
 - If not already on a fix branch, create a dedicated local branch.
 - Read the selected issue artifact.
+- If area scope or issue subset was provided, filter to only the matching issues.
 
 ### 3. Execution Loop
 
@@ -67,7 +72,11 @@ Repeat until all open issues are resolved or the user requests stop:
 
 **Quality gate:**
 
-→ Run: `/quality-gate` workflow
+Run quality checks directly (do not invoke `/quality-gate` or launch subagents):
+1. Detect and run the project's formatter in check mode
+2. Detect and run the project's linter
+3. Detect and run the project's test runner
+4. Detect and run the project's build command
 
 Fix any failures before proceeding.
 
@@ -84,7 +93,7 @@ Fix any failures before proceeding.
 
 When all open issues for the selected type are resolved (or marked with data requests):
 
-- Run a final `/quality-gate` pass.
+- Run a final quality check pass (format, lint, test, build) directly via bash.
 - Report:
   - Issues fixed (by area + summary)
   - Commits created (SHA + short message)

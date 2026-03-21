@@ -31,30 +31,14 @@ Understand:
 
 ### 2. Launch Parallel Assessments
 
-Launch 4 sub-agents in parallel using the Task tool:
+Launch the following sub-agents in parallel:
 
-```yaml
-Sub-agent 1: assess-observability
-  → Invoke /assess-observability
-  → Assess observability needs (logging, metrics, tracing)
+→ Run: `/assess-observability` — assess observability needs (logging, metrics, tracing)
+→ Run: `/assess-testing` — define testing strategy (Tier 0/1/2)
+→ Run: `/assess-data` — plan data schema changes, migrations, backfills
+→ Run: `/assess-rollout` — define deployment strategy and verification
 
-Sub-agent 2: assess-testing
-  → Invoke /assess-testing
-  → Define testing strategy (Tier 0/1/2)
-
-Sub-agent 3: assess-data
-  → Invoke /assess-data
-  → Plan data schema changes, migrations, backfills
-
-Sub-agent 4: assess-rollout
-  → Invoke /assess-rollout
-  → Define deployment strategy and verification
-```
-
-Each sub-agent will:
-- Read its primitive definition
-- Assess the feature for its dimension
-- Return a structured object with findings
+Each sub-agent will assess the feature for its dimension and return a structured object with findings.
 
 ### 3. Wait for All Sub-Agents
 

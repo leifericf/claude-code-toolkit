@@ -77,7 +77,9 @@ Structure:
 
 ### 4. Assess Quality Gates
 
-Run `/assess-quality-gates` to evaluate observability, testing, data, and rollout concerns in parallel. Review the returned assessment and incorporate the results into the plan artifact (section by section).
+→ Run: `/assess-quality-gates` — evaluate observability, testing, data, and rollout concerns in parallel.
+
+Review the returned assessment and incorporate the results into the plan artifact (section by section).
 
 ### 5. Plan Chunks and Tasks
 

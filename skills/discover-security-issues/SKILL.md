@@ -2,6 +2,8 @@
 name: discover-security-issues
 description: Discover security vulnerabilities using deterministic analysis with threat scenarios and evidence collection.
 user-invocable: false
+context: fork
+agent: issue-discoverer
 ---
 
 # Discover Security Issues
