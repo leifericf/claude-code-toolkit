@@ -1,6 +1,6 @@
 ---
 name: review-plan
-description: Quality review a feature plan to surface ambiguity, contradictions, risky assumptions, and missing acceptance criteria. Translate risks into testable questions. Use when a plan needs validation before execution.
+description: Review a plan for gaps, risks, and ambiguity
 ---
 
 # Review Plan

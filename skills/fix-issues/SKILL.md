@@ -1,6 +1,6 @@
 ---
 name: fix-issues
-description: Fix issues from a discovery artifact one at a time with prevention analysis and quality verification. Use after /find-issues or /audit-codebase.
+description: Fix issues from a discovery artifact one at a time
 ---
 
 # Fix Issues

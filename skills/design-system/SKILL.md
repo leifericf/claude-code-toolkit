@@ -1,6 +1,6 @@
 ---
 name: design-system
-description: Design a system from problem description through requirements, risks, UX, technical architecture, and backlog creation. Use when starting a new project or major redesign.
+description: Design a system end-to-end from problem to backlog
 disable-model-invocation: true
 ---
 

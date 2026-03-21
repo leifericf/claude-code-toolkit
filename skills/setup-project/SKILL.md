@@ -1,6 +1,6 @@
 ---
 name: setup-project
-description: Set up a new project by capturing user preferences and bootstrapping artifact structure. Use when starting a new project or initializing Claude Code for the first time.
+description: Set up a new project with preferences and artifacts
 disable-model-invocation: true
 ---
 

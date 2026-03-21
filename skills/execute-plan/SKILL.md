@@ -1,6 +1,6 @@
 ---
 name: execute-plan
-description: Implement a feature plan in small, verifiable chunks with logical commit boundaries. Follow trunk-based development with Conventional Commits. Use after a plan has been created and reviewed.
+description: Implement a feature plan in small, verified chunks
 ---
 
 # Execute Plan

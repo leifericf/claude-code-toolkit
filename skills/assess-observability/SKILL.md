@@ -1,6 +1,6 @@
 ---
 name: assess-observability
-description: Determine observability needs (logging, metrics, tracing) for a feature.
+description: Plan logging, metrics, and tracing for a feature
 user-invocable: false
 ---
 

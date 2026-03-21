@@ -1,6 +1,6 @@
 ---
 name: assess-data
-description: Plan data schema changes, migrations, and backfills for a feature.
+description: Plan schema changes, migrations, and backfills
 user-invocable: false
 ---
 

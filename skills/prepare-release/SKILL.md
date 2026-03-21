@@ -1,6 +1,6 @@
 ---
 name: prepare-release
-description: Prepare a versioned release following Semantic Versioning with constellation codenames. Create release candidates or proper releases with appropriate version bumping. Use when creating a production release.
+description: Create a versioned release with semver
 disable-model-invocation: true
 ---
 

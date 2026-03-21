@@ -1,6 +1,6 @@
 ---
 name: remediate-issues
-description: Fix all discovered issues across security, bugs, and UX/UI tracks in priority order with parallel execution for independent code areas. Use after /audit-codebase to systematically address findings.
+description: Fix all discovered issues in priority order
 disable-model-invocation: true
 ---
 

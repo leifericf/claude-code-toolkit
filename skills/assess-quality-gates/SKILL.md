@@ -1,6 +1,6 @@
 ---
 name: assess-quality-gates
-description: Assess observability, testing, data migration, and rollout readiness in parallel. Use during planning to define quality requirements.
+description: Assess observability, testing, and rollout readiness
 ---
 
 # Assess Quality Gates

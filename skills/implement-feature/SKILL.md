@@ -1,6 +1,6 @@
 ---
 name: implement-feature
-description: Implement a feature from selection to validation. High-level orchestrator that guides you through the complete implementation workflow.
+description: Implement a feature from selection to validation
 disable-model-invocation: true
 ---
 

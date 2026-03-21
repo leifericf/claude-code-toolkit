@@ -1,6 +1,6 @@
 ---
 name: create-backlog
-description: Translate the technical design into executable work by creating a prioritized product backlog. Shape backlog around smallest valuable increments. Use after technical design is complete to define implementation sequence.
+description: Create prioritized backlog from technical design
 ---
 
 # Create Product Backlog

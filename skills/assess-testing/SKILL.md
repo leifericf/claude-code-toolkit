@@ -1,6 +1,6 @@
 ---
 name: assess-testing
-description: Define testing strategy (Tier 0/1/2) for a feature.
+description: Define testing strategy (Tier 0/1/2) for a feature
 user-invocable: false
 ---
 

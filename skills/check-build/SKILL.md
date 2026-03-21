@@ -1,6 +1,6 @@
 ---
 name: check-build
-description: Run build process and verify project compiles successfully.
+description: Run build and verify compilation
 user-invocable: false
 allowed-tools: Bash
 ---

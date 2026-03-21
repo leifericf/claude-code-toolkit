@@ -1,6 +1,6 @@
 ---
 name: audit-codebase
-description: Audit the codebase for bugs, security vulnerabilities, and UX/UI issues with two-pass saturation. Produces a release-readiness verdict (GO / GO WITH RISKS / NO-GO). Use before releases or after major changes.
+description: Audit for bugs, security, and UX issues before release
 disable-model-invocation: true
 ---
 

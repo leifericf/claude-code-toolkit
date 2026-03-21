@@ -1,6 +1,6 @@
 ---
 name: triage-backlog
-description: Triage and reprioritize the backlog to keep it a living document that reflects both upcoming work and shipped features. Use when the backlog feels stale or needs reorganization.
+description: Reprioritize backlog to reflect current state
 ---
 
 # Triage Backlog

@@ -1,6 +1,6 @@
 ---
 name: capture-preferences
-description: Capture user interaction preferences for future sessions including verbosity, question style, and working preferences. Use to personalize Claude Code behavior across sessions.
+description: Capture interaction preferences for future sessions
 ---
 
 # Capture User Preferences

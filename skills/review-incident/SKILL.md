@@ -1,6 +1,6 @@
 ---
 name: review-incident
-description: Conduct blameless incident review focused on learning and preventing recurrence. Document impact, timeline, response, and action items. Use after an incident is resolved.
+description: Blameless incident review with action items
 ---
 
 # Review Incident

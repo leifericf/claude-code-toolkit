@@ -1,6 +1,6 @@
 ---
 name: find-issues
-description: Find bugs, security vulnerabilities, or UX/UI issues by launching discovery primitives in parallel. Choose scope (feature branch, unpushed commits, or full repo) and issue type. Use for targeted or comprehensive issue discovery.
+description: Find bugs, security, or UX issues in a chosen scope
 ---
 
 # Find Issues

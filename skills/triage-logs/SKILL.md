@@ -1,6 +1,6 @@
 ---
 name: triage-logs
-description: Turn noisy alerts and logs into structured, actionable analysis. Identify symptoms, assess impact, form hypotheses, and propose reversible mitigations. Use when triaging production signals or investigating issues.
+description: Turn noisy alerts/logs into structured analysis
 ---
 
 # Triage Logs

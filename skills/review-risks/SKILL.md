@@ -1,6 +1,6 @@
 ---
 name: review-risks
-description: Surface ambiguity, contradictions, risky assumptions, and missing acceptance criteria. Translate risks into testable questions and mitigations. Use after PRD is complete to prevent rework and identify potential issues early.
+description: Surface risky assumptions and missing criteria in a PRD
 ---
 
 # Review Risks and Assumptions

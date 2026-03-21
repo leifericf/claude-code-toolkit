@@ -1,6 +1,6 @@
 ---
 name: check-tests
-description: Run test suite and verify code correctness.
+description: Run test suite and verify correctness
 user-invocable: false
 allowed-tools: Bash
 ---

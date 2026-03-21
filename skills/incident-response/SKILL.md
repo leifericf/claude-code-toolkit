@@ -1,6 +1,6 @@
 ---
 name: incident-response
-description: Handle production incidents from log triage to root cause analysis and risk assessment. Use when responding to outages, degradations, or production issues.
+description: Handle production incidents from triage to root cause
 disable-model-invocation: true
 ---
 

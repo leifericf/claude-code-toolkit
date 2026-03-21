@@ -1,6 +1,6 @@
 ---
 name: assess-rollout
-description: Define deployment strategy and verification for a feature.
+description: Define deployment strategy and verification
 user-invocable: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: discover-ux-issues
-description: Discover UX/UI issues using deterministic analysis with usability, accessibility, and design quality evaluation.
+description: Find UX/UI issues with accessibility evaluation
 user-invocable: false
 context: fork
 agent: issue-discoverer

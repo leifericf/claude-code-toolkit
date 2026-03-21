@@ -1,6 +1,6 @@
 ---
 name: check-format
-description: Run code formatters and verify formatting is correct.
+description: Run formatters and verify formatting
 user-invocable: false
 allowed-tools: Bash
 ---

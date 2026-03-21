@@ -1,6 +1,6 @@
 ---
 name: check-lint
-description: Run linters and verify code quality standards. Detect project linting tools automatically and report violations with suggested fixes.
+description: Run linters and report violations
 user-invocable: false
 allowed-tools: Bash
 ---
