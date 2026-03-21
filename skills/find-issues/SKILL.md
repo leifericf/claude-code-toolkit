@@ -37,19 +37,23 @@ If issue type is not explicitly provided by a parent workflow, ask the user:
 
 ### 3. Launch Discovery
 
-**If type is "all"**, invoke all three discovery skills in parallel:
+**CRITICAL: Use the Agent tool, NOT the Skill tool.** The Skill tool is blocking/sequential. To run discoveries concurrently, you MUST launch them as Agent subagents in a single message with multiple tool calls.
 
-→ Run: `/discover-bugs` — scope: <selected scope>
-→ Run: `/discover-security-issues` — scope: <selected scope>
-→ Run: `/discover-ux-issues` — scope: <selected scope>
+**If type is "all"**, launch all three as `issue-discoverer` subagents in ONE message (this makes them run concurrently):
 
-**If a single type is selected**, invoke only the corresponding discovery skill.
+- Agent 1: `subagent_type: issue-discoverer`, prompt = full discover-bugs procedure (from `.claude/skills/discover-bugs/SKILL.md`) + scope
+- Agent 2: `subagent_type: issue-discoverer`, prompt = full discover-security-issues procedure (from `.claude/skills/discover-security-issues/SKILL.md`) + scope
+- Agent 3: `subagent_type: issue-discoverer`, prompt = full discover-ux-issues procedure (from `.claude/skills/discover-ux-issues/SKILL.md`) + scope
 
-Each discovery skill has `context: fork` with `agent: issue-discoverer`, so it automatically runs in an isolated subagent with read-only tools and the Sonnet model. Each discoverer analyzes the codebase within the given scope, writes its artifact to `.claude/artifacts/ops/`, and returns a structured result.
+Read each skill's `SKILL.md` file first, then pass its full content (excluding the frontmatter) as the agent prompt, prepended with the scope context.
 
-### 4. Wait for All Discovery Skills
+**If a single type is selected**, launch only the corresponding subagent.
 
-Wait for all launched discovery skills to complete before proceeding.
+Each subagent runs with read-only tools and the Sonnet model, analyzes the codebase within the given scope, writes its artifact to `.claude/artifacts/ops/`, and returns a structured result.
+
+### 4. Wait for All Subagents
+
+All agents launched in the same message run concurrently. Wait for all to complete before proceeding.
 
 Do not report results until all have returned.
 
