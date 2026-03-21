@@ -2,7 +2,7 @@
 name: check-format
 description: Run code formatters and verify formatting is correct.
 user-invocable: false
-allowed-tools: ["Bash"]
+allowed-tools: Bash
 ---
 
 # Check Format

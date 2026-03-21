@@ -2,7 +2,7 @@
 name: check-build
 description: Run build process and verify project compiles successfully.
 user-invocable: false
-allowed-tools: ["Bash"]
+allowed-tools: Bash
 ---
 
 # Check Build

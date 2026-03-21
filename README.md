@@ -61,14 +61,10 @@ git clone https://github.com/leifericf/claude-code-toolkit.git ~/claude-code-too
 
 # Symlink into your project (macOS, Linux, WSL):
 mkdir -p /path/to/your/project/.claude
-ln -s ~/claude-code-toolkit/workflows /path/to/your/project/.claude/workflows
-ln -s ~/claude-code-toolkit/orchestrators /path/to/your/project/.claude/orchestrators
-ln -s ~/claude-code-toolkit/primitives /path/to/your/project/.claude/primitives
+ln -s ~/claude-code-toolkit/skills /path/to/your/project/.claude/skills
 
 # Or copy if you prefer a standalone snapshot:
-cp -r ~/claude-code-toolkit/workflows /path/to/your/project/.claude/workflows
-cp -r ~/claude-code-toolkit/orchestrators /path/to/your/project/.claude/orchestrators
-cp -r ~/claude-code-toolkit/primitives /path/to/your/project/.claude/primitives
+cp -r ~/claude-code-toolkit/skills /path/to/your/project/.claude/skills
 ```
 
 **Note:** Symlinks work on macOS, Linux, and WSL. Native Windows does not reliably support symlinks — use WSL or copy instead.
@@ -99,7 +95,7 @@ Then run `/setup-project` in Claude Code to initialize the project's artifact st
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### Layer 1: Orchestrators (`orchestrators/`)
+### Layer 1: Orchestrators (`disable-model-invocation: true`)
 
 **High-level entry points you invoke directly.** Each orchestrator composes multiple workflows into complete end-to-end flows.
 
@@ -107,21 +103,23 @@ Then run `/setup-project` in Claude Code to initialize the project's artifact st
 - **Benefit**: One command handles everything automatically
 - **Count**: 6 orchestrators
 
-### Layer 2: Workflows (`workflows/`)
+### Layer 2: Workflows
 
 **Composable workflows you can run standalone or composed into orchestrators.** Each workflow focuses on a specific aspect of software development.
 
 - **Sometimes**: You'll run a workflow directly for fine-grained control
 - **Benefit**: Each workflow is independently useful and reusable
-- **Count**: 18 workflows
+- **Count**: 20 workflows
 
-### Layer 3: Primitives (`primitives/`)
+### Layer 3: Primitives (`user-invocable: false`)
 
-**Internal atomic units launched automatically by workflows.** Do not invoke these directly.
+**Internal atomic units launched automatically by workflows.** Hidden from the `/` menu — do not invoke these directly.
 
 - **Never**: You'll invoke primitives directly
 - **Benefit**: Enable parallel execution, reusable components
 - **Count**: 8 primitives
+
+All 34 skills live in a flat `skills/` directory. Layers are distinguished by frontmatter fields, not directory structure.
 
 ## Design Principles
 
@@ -179,35 +177,43 @@ Total: 1 minute
 
 ```
 claude-code-toolkit/
-├── orchestrators/          # Layer 1: High-level entry points
-│   ├── README.md
-│   ├── implement-feature/
-│   ├── design-system/
-│   ├── incident-response/
-│   ├── setup-project/
-│   ├── git/
-│   │   └── merge-to-trunk/
-│   └── release/
-│       └── prepare-release/
-│
-├── workflows/              # Layer 2: Composable workflows
-│   ├── README.md
-│   ├── setup/
-│   ├── planning/
-│   ├── implementation/
-│   ├── ops/
-│   └── README.md
-│
-└── primitives/             # Layer 3: Internal atomic units
-    ├── README.md
-    ├── assess-observability.md
-    ├── assess-testing.md
-    ├── assess-data.md
-    ├── assess-rollout.md
-    ├── check-format.md
-    ├── check-lint.md
-    ├── check-tests.md
-    └── check-build.md
+└── skills/                          # All skills (flat, auto-discovered)
+    ├── implement-feature/SKILL.md   # Orchestrator
+    ├── design-system/SKILL.md       # Orchestrator
+    ├── incident-response/SKILL.md   # Orchestrator
+    ├── setup-project/SKILL.md       # Orchestrator
+    ├── merge-to-trunk/SKILL.md      # Orchestrator
+    ├── prepare-release/SKILL.md     # Orchestrator
+    ├── bootstrap-project/SKILL.md   # Workflow
+    ├── capture-preferences/SKILL.md # Workflow
+    ├── describe-problem/SKILL.md    # Workflow
+    ├── define-requirements/SKILL.md # Workflow
+    ├── design-ux/SKILL.md           # Workflow
+    ├── design-technical/SKILL.md    # Workflow
+    ├── review-risks/SKILL.md        # Workflow
+    ├── create-backlog/SKILL.md      # Workflow
+    ├── pick-feature/SKILL.md        # Workflow
+    ├── plan-feature/                # Workflow (with supporting file)
+    │   ├── SKILL.md
+    │   └── plan-template.md
+    ├── execute-plan/SKILL.md        # Workflow
+    ├── review-plan/SKILL.md         # Workflow
+    ├── validate-feature/SKILL.md    # Workflow
+    ├── triage-backlog/SKILL.md      # Workflow
+    ├── quality-gate/SKILL.md        # Workflow
+    ├── assess-quality-gates/SKILL.md# Workflow
+    ├── triage-logs/SKILL.md         # Workflow
+    ├── review-incident/SKILL.md     # Workflow
+    ├── analyze-root-cause/SKILL.md  # Workflow
+    ├── assess-risk/SKILL.md         # Workflow
+    ├── assess-observability/SKILL.md# Primitive (hidden)
+    ├── assess-testing/SKILL.md      # Primitive (hidden)
+    ├── assess-data/SKILL.md         # Primitive (hidden)
+    ├── assess-rollout/SKILL.md      # Primitive (hidden)
+    ├── check-format/SKILL.md        # Primitive (hidden)
+    ├── check-lint/SKILL.md          # Primitive (hidden)
+    ├── check-tests/SKILL.md         # Primitive (hidden)
+    └── check-build/SKILL.md         # Primitive (hidden)
 ```
 
 ## How to Use
@@ -239,10 +245,10 @@ You get fine-grained control over each step.
 Launch primitives via the Task tool:
 ```yaml
 Launch 4 primitives in parallel:
-  → Task: Read primitives/assess-observability.md
-  → Task: Read primitives/assess-testing.md
-  → Task: Read primitives/assess-data.md
-  → Task: Read primitives/assess-rollout.md
+  → Task: Read skills/assess-observability/SKILL.md
+  → Task: Read skills/assess-testing/SKILL.md
+  → Task: Read skills/assess-data/SKILL.md
+  → Task: Read skills/assess-rollout/SKILL.md
 Wait for all to complete
 Merge results
 ```
@@ -253,7 +259,8 @@ Created by `/setup-project` inside your project's `.claude/` directory:
 
 ```
 .claude/
-  workflows/              # The toolkit (copied from this repo)
+  skills/                  # The toolkit (symlinked or copied from this repo)
+  artifacts/
     planning/              # Backlog, requirements, problem description, designs
       tasks/               # Feature implementation plans
     decisions/             # Decision log, open questions
@@ -261,7 +268,7 @@ Created by `/setup-project` inside your project's `.claude/` directory:
     ops/                   # Incident reviews, RCAs, risk assessments
 ```
 
-Commit `workflows` and `artifacts` to your repo so the team shares them. Add a `.claude/.gitignore` to exclude personal files:
+Commit `skills` and `artifacts` to your repo so the team shares them. Add a `.claude/.gitignore` to exclude personal files:
 
 ```gitignore
 # Personal settings (not shared)

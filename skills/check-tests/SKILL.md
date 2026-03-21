@@ -2,7 +2,7 @@
 name: check-tests
 description: Run test suite and verify code correctness.
 user-invocable: false
-allowed-tools: ["Bash"]
+allowed-tools: Bash
 ---
 
 # Check Tests
