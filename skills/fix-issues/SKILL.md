@@ -55,6 +55,7 @@ Repeat until all open issues are resolved or the user requests stop:
   - Bugs: `NEEDS_REPRO:` in `notes`
   - Security: `NEEDS_EVIDENCE:` in `evidence`
   - UX/UI: `NEEDS_VALIDATION:` in `reasoning`
+- If the issue requires design decisions, user input, or architectural changes beyond a straightforward fix, **defer it** — do not guess a fix or block on it. Continue to the next issue.
 - Stop for that issue if validation is insufficient. Do not guess a fix.
 
 **Gap check** (mandatory, before the fix):
@@ -83,6 +84,13 @@ Fix any failures before proceeding.
 **Update artifact** (mandatory, same commit):
 - Remove the fixed issue row from the artifact.
 
+**Deferring an issue:**
+
+If an issue cannot be fixed because it requires design discussion, user input, architectural changes, or has insufficient evidence:
+- Do NOT remove the row from the artifact.
+- Append a `**DEFERRED YYYY-MM-DD**:` note to the issue's notes/evidence/reasoning column explaining WHY it was deferred and WHAT is needed to unblock it.
+- Continue immediately to the next issue — never stop the loop for a deferral.
+
 **Commit** (mandatory):
 - Stage only the fix + prevention + artifact update.
 - Create one commit following Conventional Commits: `fix(<area>): <short description>`
@@ -97,6 +105,7 @@ When all open issues for the selected type are resolved (or marked with data req
 - Report:
   - Issues fixed (by area + summary)
   - Commits created (SHA + short message)
+  - Issues deferred with reason (design decision needed, user input required, etc.)
   - Remaining `NEEDS_REPRO` / `NEEDS_VALIDATION` / `NEEDS_EVIDENCE` items and exact data needed
 
 ## Shared Scales

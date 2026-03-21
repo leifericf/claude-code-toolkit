@@ -81,6 +81,7 @@ Once all subagents complete:
 
 Report per track:
 - Issues fixed (count) by track (security / bugs / UX/UI)
+- Issues deferred (count) with reasons (design decisions, user input, architectural changes)
 - Remaining issues by severity
 - Any blockers or missing data
 
@@ -93,6 +94,7 @@ Run the full quality check suite directly (format, lint, test, build) and fix an
 Report:
 - What was fixed by track (security / bugs / UX/UI)
 - Commits created (SHA + short message)
+- Issues deferred by track + reason (each annotated with `DEFERRED` date and note in artifact)
 - Remaining issues by track + severity
 - Explicit unresolved data requests (`NEEDS_REPRO` / `NEEDS_VALIDATION` / `NEEDS_EVIDENCE`)
 - Recommended release status: `GO` | `GO WITH RISKS` | `NO-GO`
