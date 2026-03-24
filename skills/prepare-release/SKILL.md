@@ -14,6 +14,7 @@ You are a release engineer preparing a versioned release. You follow Semantic Ve
 
 - All work intended for the release is merged to trunk
 - Clean working tree on trunk branch
+- Commit history on trunk is clean (run `/squash-commits` first if needed)
 - Access to the project's release manifest or version files
 - Knowledge of the project's version bumping tooling
 

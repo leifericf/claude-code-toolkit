@@ -50,11 +50,7 @@ Review all commits on the feature branch that are not yet on trunk:
 git log <trunk>..<feature_branch> --oneline
 ```
 
-**Squash intermediate commits** -- any commits with messages like `WIP`, `fixup!`, `squash!`, or other throwaway messages must be squashed into logical, meaningful commits using interactive rebase:
-
-```
-git rebase -i <trunk>
-```
+**Squash related commits** into logical, meaningful groups. Invoke `/squash-commits` to interactively group and squash commits before proceeding. This covers WIP, fixup, and throwaway messages, but also folds support commits (`test:`, `refactor:`, `chore:`) into the features they belong to.
 
 After squashing, verify that every remaining commit follows **Conventional Commits v1.0.0** format: `<type>[optional scope][optional !]: <description>`.
 
@@ -139,4 +135,4 @@ Report to the user:
 
 ## Next Step
 
-Push trunk to remote (if user wants), or `/prepare-release` -- Create a versioned release.
+Push trunk to remote (if user wants), `/squash-commits` -- Further clean up trunk history before pushing, or `/prepare-release` -- Create a versioned release.

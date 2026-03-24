@@ -135,4 +135,4 @@ Code changes committed to a local feature branch, with updated task checkboxes i
 
 ## Next Step
 
-`/validate-feature` (optional) -- Structured validation walkthrough, or `/triage-backlog` -- Update backlog priorities.
+`/validate-feature` (optional) -- Structured validation walkthrough, `/merge-to-trunk` -- Rebase and merge (includes `/squash-commits`), or `/triage-backlog` -- Update backlog priorities.
